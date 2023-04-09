@@ -1,0 +1,2 @@
+MEMORY BUG: test033.cc:16: invalid free of pointer 0x1ef4288, double free
+free(): double free detected in tcache 2

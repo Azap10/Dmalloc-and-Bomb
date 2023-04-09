@@ -1,0 +1,2056 @@
+
+bomb:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+08049000 <_init>:
+ 8049000:	f3 0f 1e fb          	endbr32 
+ 8049004:	53                   	push   %ebx
+ 8049005:	83 ec 08             	sub    $0x8,%esp
+ 8049008:	e8 63 02 00 00       	call   8049270 <__x86.get_pc_thunk.bx>
+ 804900d:	81 c3 f3 4f 00 00    	add    $0x4ff3,%ebx
+ 8049013:	8b 83 f0 ff ff ff    	mov    -0x10(%ebx),%eax
+ 8049019:	85 c0                	test   %eax,%eax
+ 804901b:	74 02                	je     804901f <_init+0x1f>
+ 804901d:	ff d0                	call   *%eax
+ 804901f:	83 c4 08             	add    $0x8,%esp
+ 8049022:	5b                   	pop    %ebx
+ 8049023:	c3                   	ret    
+
+Disassembly of section .plt:
+
+08049030 <strcmp@plt-0x10>:
+ 8049030:	ff 35 04 e0 04 08    	push   0x804e004
+ 8049036:	ff 25 08 e0 04 08    	jmp    *0x804e008
+ 804903c:	00 00                	add    %al,(%eax)
+	...
+
+08049040 <strcmp@plt>:
+ 8049040:	ff 25 0c e0 04 08    	jmp    *0x804e00c
+ 8049046:	68 00 00 00 00       	push   $0x0
+ 804904b:	e9 e0 ff ff ff       	jmp    8049030 <_init+0x30>
+
+08049050 <__libc_start_main@plt>:
+ 8049050:	ff 25 10 e0 04 08    	jmp    *0x804e010
+ 8049056:	68 08 00 00 00       	push   $0x8
+ 804905b:	e9 d0 ff ff ff       	jmp    8049030 <_init+0x30>
+
+08049060 <read@plt>:
+ 8049060:	ff 25 14 e0 04 08    	jmp    *0x804e014
+ 8049066:	68 10 00 00 00       	push   $0x10
+ 804906b:	e9 c0 ff ff ff       	jmp    8049030 <_init+0x30>
+
+08049070 <fflush@plt>:
+ 8049070:	ff 25 18 e0 04 08    	jmp    *0x804e018
+ 8049076:	68 18 00 00 00       	push   $0x18
+ 804907b:	e9 b0 ff ff ff       	jmp    8049030 <_init+0x30>
+
+08049080 <fgets@plt>:
+ 8049080:	ff 25 1c e0 04 08    	jmp    *0x804e01c
+ 8049086:	68 20 00 00 00       	push   $0x20
+ 804908b:	e9 a0 ff ff ff       	jmp    8049030 <_init+0x30>
+
+08049090 <signal@plt>:
+ 8049090:	ff 25 20 e0 04 08    	jmp    *0x804e020
+ 8049096:	68 28 00 00 00       	push   $0x28
+ 804909b:	e9 90 ff ff ff       	jmp    8049030 <_init+0x30>
+
+080490a0 <sleep@plt>:
+ 80490a0:	ff 25 24 e0 04 08    	jmp    *0x804e024
+ 80490a6:	68 30 00 00 00       	push   $0x30
+ 80490ab:	e9 80 ff ff ff       	jmp    8049030 <_init+0x30>
+
+080490b0 <alarm@plt>:
+ 80490b0:	ff 25 28 e0 04 08    	jmp    *0x804e028
+ 80490b6:	68 38 00 00 00       	push   $0x38
+ 80490bb:	e9 70 ff ff ff       	jmp    8049030 <_init+0x30>
+
+080490c0 <strcpy@plt>:
+ 80490c0:	ff 25 2c e0 04 08    	jmp    *0x804e02c
+ 80490c6:	68 40 00 00 00       	push   $0x40
+ 80490cb:	e9 60 ff ff ff       	jmp    8049030 <_init+0x30>
+
+080490d0 <gethostname@plt>:
+ 80490d0:	ff 25 30 e0 04 08    	jmp    *0x804e030
+ 80490d6:	68 48 00 00 00       	push   $0x48
+ 80490db:	e9 50 ff ff ff       	jmp    8049030 <_init+0x30>
+
+080490e0 <getenv@plt>:
+ 80490e0:	ff 25 34 e0 04 08    	jmp    *0x804e034
+ 80490e6:	68 50 00 00 00       	push   $0x50
+ 80490eb:	e9 40 ff ff ff       	jmp    8049030 <_init+0x30>
+
+080490f0 <malloc@plt>:
+ 80490f0:	ff 25 38 e0 04 08    	jmp    *0x804e038
+ 80490f6:	68 58 00 00 00       	push   $0x58
+ 80490fb:	e9 30 ff ff ff       	jmp    8049030 <_init+0x30>
+
+08049100 <puts@plt>:
+ 8049100:	ff 25 3c e0 04 08    	jmp    *0x804e03c
+ 8049106:	68 60 00 00 00       	push   $0x60
+ 804910b:	e9 20 ff ff ff       	jmp    8049030 <_init+0x30>
+
+08049110 <__memmove_chk@plt>:
+ 8049110:	ff 25 40 e0 04 08    	jmp    *0x804e040
+ 8049116:	68 68 00 00 00       	push   $0x68
+ 804911b:	e9 10 ff ff ff       	jmp    8049030 <_init+0x30>
+
+08049120 <exit@plt>:
+ 8049120:	ff 25 44 e0 04 08    	jmp    *0x804e044
+ 8049126:	68 70 00 00 00       	push   $0x70
+ 804912b:	e9 00 ff ff ff       	jmp    8049030 <_init+0x30>
+
+08049130 <strlen@plt>:
+ 8049130:	ff 25 48 e0 04 08    	jmp    *0x804e048
+ 8049136:	68 78 00 00 00       	push   $0x78
+ 804913b:	e9 f0 fe ff ff       	jmp    8049030 <_init+0x30>
+
+08049140 <write@plt>:
+ 8049140:	ff 25 4c e0 04 08    	jmp    *0x804e04c
+ 8049146:	68 80 00 00 00       	push   $0x80
+ 804914b:	e9 e0 fe ff ff       	jmp    8049030 <_init+0x30>
+
+08049150 <strcasecmp@plt>:
+ 8049150:	ff 25 50 e0 04 08    	jmp    *0x804e050
+ 8049156:	68 88 00 00 00       	push   $0x88
+ 804915b:	e9 d0 fe ff ff       	jmp    8049030 <_init+0x30>
+
+08049160 <__isoc99_sscanf@plt>:
+ 8049160:	ff 25 54 e0 04 08    	jmp    *0x804e054
+ 8049166:	68 90 00 00 00       	push   $0x90
+ 804916b:	e9 c0 fe ff ff       	jmp    8049030 <_init+0x30>
+
+08049170 <fopen@plt>:
+ 8049170:	ff 25 58 e0 04 08    	jmp    *0x804e058
+ 8049176:	68 98 00 00 00       	push   $0x98
+ 804917b:	e9 b0 fe ff ff       	jmp    8049030 <_init+0x30>
+
+08049180 <__errno_location@plt>:
+ 8049180:	ff 25 5c e0 04 08    	jmp    *0x804e05c
+ 8049186:	68 a0 00 00 00       	push   $0xa0
+ 804918b:	e9 a0 fe ff ff       	jmp    8049030 <_init+0x30>
+
+08049190 <__printf_chk@plt>:
+ 8049190:	ff 25 60 e0 04 08    	jmp    *0x804e060
+ 8049196:	68 a8 00 00 00       	push   $0xa8
+ 804919b:	e9 90 fe ff ff       	jmp    8049030 <_init+0x30>
+
+080491a0 <socket@plt>:
+ 80491a0:	ff 25 64 e0 04 08    	jmp    *0x804e064
+ 80491a6:	68 b0 00 00 00       	push   $0xb0
+ 80491ab:	e9 80 fe ff ff       	jmp    8049030 <_init+0x30>
+
+080491b0 <__fprintf_chk@plt>:
+ 80491b0:	ff 25 68 e0 04 08    	jmp    *0x804e068
+ 80491b6:	68 b8 00 00 00       	push   $0xb8
+ 80491bb:	e9 70 fe ff ff       	jmp    8049030 <_init+0x30>
+
+080491c0 <gethostbyname@plt>:
+ 80491c0:	ff 25 6c e0 04 08    	jmp    *0x804e06c
+ 80491c6:	68 c0 00 00 00       	push   $0xc0
+ 80491cb:	e9 60 fe ff ff       	jmp    8049030 <_init+0x30>
+
+080491d0 <strtol@plt>:
+ 80491d0:	ff 25 70 e0 04 08    	jmp    *0x804e070
+ 80491d6:	68 c8 00 00 00       	push   $0xc8
+ 80491db:	e9 50 fe ff ff       	jmp    8049030 <_init+0x30>
+
+080491e0 <connect@plt>:
+ 80491e0:	ff 25 74 e0 04 08    	jmp    *0x804e074
+ 80491e6:	68 d0 00 00 00       	push   $0xd0
+ 80491eb:	e9 40 fe ff ff       	jmp    8049030 <_init+0x30>
+
+080491f0 <close@plt>:
+ 80491f0:	ff 25 78 e0 04 08    	jmp    *0x804e078
+ 80491f6:	68 d8 00 00 00       	push   $0xd8
+ 80491fb:	e9 30 fe ff ff       	jmp    8049030 <_init+0x30>
+
+08049200 <__ctype_b_loc@plt>:
+ 8049200:	ff 25 7c e0 04 08    	jmp    *0x804e07c
+ 8049206:	68 e0 00 00 00       	push   $0xe0
+ 804920b:	e9 20 fe ff ff       	jmp    8049030 <_init+0x30>
+
+08049210 <__sprintf_chk@plt>:
+ 8049210:	ff 25 80 e0 04 08    	jmp    *0x804e080
+ 8049216:	68 e8 00 00 00       	push   $0xe8
+ 804921b:	e9 10 fe ff ff       	jmp    8049030 <_init+0x30>
+
+Disassembly of section .text:
+
+08049220 <_start>:
+ 8049220:	f3 0f 1e fb          	endbr32 
+ 8049224:	31 ed                	xor    %ebp,%ebp
+ 8049226:	5e                   	pop    %esi
+ 8049227:	89 e1                	mov    %esp,%ecx
+ 8049229:	83 e4 f0             	and    $0xfffffff0,%esp
+ 804922c:	50                   	push   %eax
+ 804922d:	54                   	push   %esp
+ 804922e:	52                   	push   %edx
+ 804922f:	e8 19 00 00 00       	call   804924d <_start+0x2d>
+ 8049234:	81 c3 cc 4d 00 00    	add    $0x4dcc,%ebx
+ 804923a:	6a 00                	push   $0x0
+ 804923c:	6a 00                	push   $0x0
+ 804923e:	51                   	push   %ecx
+ 804923f:	56                   	push   %esi
+ 8049240:	c7 c0 36 93 04 08    	mov    $0x8049336,%eax
+ 8049246:	50                   	push   %eax
+ 8049247:	e8 04 fe ff ff       	call   8049050 <__libc_start_main@plt>
+ 804924c:	f4                   	hlt    
+ 804924d:	8b 1c 24             	mov    (%esp),%ebx
+ 8049250:	c3                   	ret    
+ 8049251:	66 90                	xchg   %ax,%ax
+ 8049253:	66 90                	xchg   %ax,%ax
+ 8049255:	66 90                	xchg   %ax,%ax
+ 8049257:	66 90                	xchg   %ax,%ax
+ 8049259:	66 90                	xchg   %ax,%ax
+ 804925b:	66 90                	xchg   %ax,%ax
+ 804925d:	66 90                	xchg   %ax,%ax
+ 804925f:	90                   	nop
+
+08049260 <_dl_relocate_static_pie>:
+ 8049260:	f3 0f 1e fb          	endbr32 
+ 8049264:	c3                   	ret    
+ 8049265:	66 90                	xchg   %ax,%ax
+ 8049267:	66 90                	xchg   %ax,%ax
+ 8049269:	66 90                	xchg   %ax,%ax
+ 804926b:	66 90                	xchg   %ax,%ax
+ 804926d:	66 90                	xchg   %ax,%ax
+ 804926f:	90                   	nop
+
+08049270 <__x86.get_pc_thunk.bx>:
+ 8049270:	8b 1c 24             	mov    (%esp),%ebx
+ 8049273:	c3                   	ret    
+ 8049274:	66 90                	xchg   %ax,%ax
+ 8049276:	66 90                	xchg   %ax,%ax
+ 8049278:	66 90                	xchg   %ax,%ax
+ 804927a:	66 90                	xchg   %ax,%ax
+ 804927c:	66 90                	xchg   %ax,%ax
+ 804927e:	66 90                	xchg   %ax,%ax
+
+08049280 <deregister_tm_clones>:
+ 8049280:	b8 e0 e7 04 08       	mov    $0x804e7e0,%eax
+ 8049285:	3d e0 e7 04 08       	cmp    $0x804e7e0,%eax
+ 804928a:	74 24                	je     80492b0 <deregister_tm_clones+0x30>
+ 804928c:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8049291:	85 c0                	test   %eax,%eax
+ 8049293:	74 1b                	je     80492b0 <deregister_tm_clones+0x30>
+ 8049295:	55                   	push   %ebp
+ 8049296:	89 e5                	mov    %esp,%ebp
+ 8049298:	83 ec 14             	sub    $0x14,%esp
+ 804929b:	68 e0 e7 04 08       	push   $0x804e7e0
+ 80492a0:	ff d0                	call   *%eax
+ 80492a2:	83 c4 10             	add    $0x10,%esp
+ 80492a5:	c9                   	leave  
+ 80492a6:	c3                   	ret    
+ 80492a7:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+ 80492ae:	66 90                	xchg   %ax,%ax
+ 80492b0:	c3                   	ret    
+ 80492b1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+ 80492b8:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+ 80492bf:	90                   	nop
+
+080492c0 <register_tm_clones>:
+ 80492c0:	b8 e0 e7 04 08       	mov    $0x804e7e0,%eax
+ 80492c5:	2d e0 e7 04 08       	sub    $0x804e7e0,%eax
+ 80492ca:	89 c2                	mov    %eax,%edx
+ 80492cc:	c1 e8 1f             	shr    $0x1f,%eax
+ 80492cf:	c1 fa 02             	sar    $0x2,%edx
+ 80492d2:	01 d0                	add    %edx,%eax
+ 80492d4:	d1 f8                	sar    %eax
+ 80492d6:	74 20                	je     80492f8 <register_tm_clones+0x38>
+ 80492d8:	ba 00 00 00 00       	mov    $0x0,%edx
+ 80492dd:	85 d2                	test   %edx,%edx
+ 80492df:	74 17                	je     80492f8 <register_tm_clones+0x38>
+ 80492e1:	55                   	push   %ebp
+ 80492e2:	89 e5                	mov    %esp,%ebp
+ 80492e4:	83 ec 10             	sub    $0x10,%esp
+ 80492e7:	50                   	push   %eax
+ 80492e8:	68 e0 e7 04 08       	push   $0x804e7e0
+ 80492ed:	ff d2                	call   *%edx
+ 80492ef:	83 c4 10             	add    $0x10,%esp
+ 80492f2:	c9                   	leave  
+ 80492f3:	c3                   	ret    
+ 80492f4:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+ 80492f8:	c3                   	ret    
+ 80492f9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+08049300 <__do_global_dtors_aux>:
+ 8049300:	f3 0f 1e fb          	endbr32 
+ 8049304:	80 3d e0 e7 04 08 00 	cmpb   $0x0,0x804e7e0
+ 804930b:	75 1b                	jne    8049328 <__do_global_dtors_aux+0x28>
+ 804930d:	55                   	push   %ebp
+ 804930e:	89 e5                	mov    %esp,%ebp
+ 8049310:	83 ec 08             	sub    $0x8,%esp
+ 8049313:	e8 68 ff ff ff       	call   8049280 <deregister_tm_clones>
+ 8049318:	c6 05 e0 e7 04 08 01 	movb   $0x1,0x804e7e0
+ 804931f:	c9                   	leave  
+ 8049320:	c3                   	ret    
+ 8049321:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+ 8049328:	c3                   	ret    
+ 8049329:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+08049330 <frame_dummy>:
+ 8049330:	f3 0f 1e fb          	endbr32 
+ 8049334:	eb 8a                	jmp    80492c0 <register_tm_clones>
+
+08049336 <main>:
+ 8049336:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+ 804933a:	83 e4 f0             	and    $0xfffffff0,%esp
+ 804933d:	ff 71 fc             	push   -0x4(%ecx)
+ 8049340:	55                   	push   %ebp
+ 8049341:	89 e5                	mov    %esp,%ebp
+ 8049343:	56                   	push   %esi
+ 8049344:	53                   	push   %ebx
+ 8049345:	51                   	push   %ecx
+ 8049346:	83 ec 0c             	sub    $0xc,%esp
+ 8049349:	e8 22 ff ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 804934e:	81 c3 b2 4c 00 00    	add    $0x4cb2,%ebx
+ 8049354:	8b 01                	mov    (%ecx),%eax
+ 8049356:	8b 71 04             	mov    0x4(%ecx),%esi
+ 8049359:	83 f8 01             	cmp    $0x1,%eax
+ 804935c:	74 7d                	je     80493db <main+0xa5>
+ 804935e:	83 f8 02             	cmp    $0x2,%eax
+ 8049361:	0f 85 a3 00 00 00    	jne    804940a <main+0xd4>
+ 8049367:	83 ec 08             	sub    $0x8,%esp
+ 804936a:	8d 83 08 d0 ff ff    	lea    -0x2ff8(%ebx),%eax
+ 8049370:	50                   	push   %eax
+ 8049371:	ff 76 04             	push   0x4(%esi)
+ 8049374:	e8 f7 fd ff ff       	call   8049170 <fopen@plt>
+ 8049379:	89 83 e4 07 00 00    	mov    %eax,0x7e4(%ebx)
+ 804937f:	83 c4 10             	add    $0x10,%esp
+ 8049382:	85 c0                	test   %eax,%eax
+ 8049384:	74 65                	je     80493eb <main+0xb5>
+ 8049386:	e8 c0 07 00 00       	call   8049b4b <initialize_bomb>
+ 804938b:	83 ec 0c             	sub    $0xc,%esp
+ 804938e:	8d 83 44 d0 ff ff    	lea    -0x2fbc(%ebx),%eax
+ 8049394:	50                   	push   %eax
+ 8049395:	e8 66 fd ff ff       	call   8049100 <puts@plt>
+ 804939a:	8d 83 7c d0 ff ff    	lea    -0x2f84(%ebx),%eax
+ 80493a0:	89 04 24             	mov    %eax,(%esp)
+ 80493a3:	e8 58 fd ff ff       	call   8049100 <puts@plt>
+ 80493a8:	e8 7c 0a 00 00       	call   8049e29 <read_line>
+ 80493ad:	89 04 24             	mov    %eax,(%esp)
+ 80493b0:	e8 24 06 00 00       	call   80499d9 <phase_10>
+ 80493b5:	e8 8e 0b 00 00       	call   8049f48 <phase_defused>
+ 80493ba:	8d 83 a8 d0 ff ff    	lea    -0x2f58(%ebx),%eax
+ 80493c0:	89 04 24             	mov    %eax,(%esp)
+ 80493c3:	e8 38 fd ff ff       	call   8049100 <puts@plt>
+ 80493c8:	83 c4 10             	add    $0x10,%esp
+ 80493cb:	b8 00 00 00 00       	mov    $0x0,%eax
+ 80493d0:	8d 65 f4             	lea    -0xc(%ebp),%esp
+ 80493d3:	59                   	pop    %ecx
+ 80493d4:	5b                   	pop    %ebx
+ 80493d5:	5e                   	pop    %esi
+ 80493d6:	5d                   	pop    %ebp
+ 80493d7:	8d 61 fc             	lea    -0x4(%ecx),%esp
+ 80493da:	c3                   	ret    
+ 80493db:	8b 83 f4 ff ff ff    	mov    -0xc(%ebx),%eax
+ 80493e1:	8b 00                	mov    (%eax),%eax
+ 80493e3:	89 83 e4 07 00 00    	mov    %eax,0x7e4(%ebx)
+ 80493e9:	eb 9b                	jmp    8049386 <main+0x50>
+ 80493eb:	ff 76 04             	push   0x4(%esi)
+ 80493ee:	ff 36                	push   (%esi)
+ 80493f0:	8d 83 0a d0 ff ff    	lea    -0x2ff6(%ebx),%eax
+ 80493f6:	50                   	push   %eax
+ 80493f7:	6a 01                	push   $0x1
+ 80493f9:	e8 92 fd ff ff       	call   8049190 <__printf_chk@plt>
+ 80493fe:	c7 04 24 08 00 00 00 	movl   $0x8,(%esp)
+ 8049405:	e8 16 fd ff ff       	call   8049120 <exit@plt>
+ 804940a:	83 ec 04             	sub    $0x4,%esp
+ 804940d:	ff 36                	push   (%esi)
+ 804940f:	8d 83 27 d0 ff ff    	lea    -0x2fd9(%ebx),%eax
+ 8049415:	50                   	push   %eax
+ 8049416:	6a 01                	push   $0x1
+ 8049418:	e8 73 fd ff ff       	call   8049190 <__printf_chk@plt>
+ 804941d:	c7 04 24 08 00 00 00 	movl   $0x8,(%esp)
+ 8049424:	e8 f7 fc ff ff       	call   8049120 <exit@plt>
+
+08049429 <phase_1>:
+ 8049429:	53                   	push   %ebx
+ 804942a:	83 ec 1c             	sub    $0x1c,%esp
+ 804942d:	e8 3e fe ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049432:	81 c3 ce 4b 00 00    	add    $0x4bce,%ebx
+ 8049438:	c7 44 24 10 00 00 00 	movl   $0x0,0x10(%esp)
+ 804943f:	00 
+ 8049440:	8d 44 24 10          	lea    0x10(%esp),%eax
+ 8049444:	50                   	push   %eax
+ 8049445:	8d 83 d4 d0 ff ff    	lea    -0x2f2c(%ebx),%eax
+ 804944b:	50                   	push   %eax
+ 804944c:	ff 74 24 2c          	push   0x2c(%esp)
+ 8049450:	e8 0b fd ff ff       	call   8049160 <__isoc99_sscanf@plt>
+ 8049455:	83 c4 10             	add    $0x10,%esp
+ 8049458:	83 f8 01             	cmp    $0x1,%eax
+ 804945b:	75 0f                	jne    804946c <phase_1+0x43>
+ 804945d:	81 7c 24 0c 3b 03 00 	cmpl   $0x33b,0xc(%esp)
+ 8049464:	00 
+ 8049465:	75 0c                	jne    8049473 <phase_1+0x4a>
+ 8049467:	83 c4 18             	add    $0x18,%esp
+ 804946a:	5b                   	pop    %ebx
+ 804946b:	c3                   	ret    
+ 804946c:	e8 1f 09 00 00       	call   8049d90 <explode_bomb>
+ 8049471:	eb ea                	jmp    804945d <phase_1+0x34>
+ 8049473:	e8 18 09 00 00       	call   8049d90 <explode_bomb>
+ 8049478:	eb ed                	jmp    8049467 <phase_1+0x3e>
+
+0804947a <phase_2>:
+ 804947a:	53                   	push   %ebx
+ 804947b:	83 ec 10             	sub    $0x10,%esp
+ 804947e:	e8 ed fd ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049483:	81 c3 7d 4b 00 00    	add    $0x4b7d,%ebx
+ 8049489:	8d 83 e0 d0 ff ff    	lea    -0x2f20(%ebx),%eax
+ 804948f:	50                   	push   %eax
+ 8049490:	ff 74 24 1c          	push   0x1c(%esp)
+ 8049494:	e8 5a 06 00 00       	call   8049af3 <strings_not_equal>
+ 8049499:	83 c4 10             	add    $0x10,%esp
+ 804949c:	85 c0                	test   %eax,%eax
+ 804949e:	75 05                	jne    80494a5 <phase_2+0x2b>
+ 80494a0:	83 c4 08             	add    $0x8,%esp
+ 80494a3:	5b                   	pop    %ebx
+ 80494a4:	c3                   	ret    
+ 80494a5:	e8 e6 08 00 00       	call   8049d90 <explode_bomb>
+ 80494aa:	eb f4                	jmp    80494a0 <phase_2+0x26>
+
+080494ac <phase_3>:
+ 80494ac:	53                   	push   %ebx
+ 80494ad:	83 ec 14             	sub    $0x14,%esp
+ 80494b0:	e8 bb fd ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 80494b5:	81 c3 4b 4b 00 00    	add    $0x4b4b,%ebx
+ 80494bb:	8d 83 08 d1 ff ff    	lea    -0x2ef8(%ebx),%eax
+ 80494c1:	50                   	push   %eax
+ 80494c2:	e8 0e 06 00 00       	call   8049ad5 <string_length>
+ 80494c7:	83 c0 01             	add    $0x1,%eax
+ 80494ca:	89 04 24             	mov    %eax,(%esp)
+ 80494cd:	e8 1e fc ff ff       	call   80490f0 <malloc@plt>
+ 80494d2:	c7 00 49 20 61 6d    	movl   $0x6d612049,(%eax)
+ 80494d8:	c7 40 04 20 74 68 65 	movl   $0x65687420,0x4(%eax)
+ 80494df:	c7 40 08 20 6d 61 79 	movl   $0x79616d20,0x8(%eax)
+ 80494e6:	c7 40 0c 6f 72 2e 20 	movl   $0x202e726f,0xc(%eax)
+ 80494ed:	c7 40 10 49 20 63 61 	movl   $0x61632049,0x10(%eax)
+ 80494f4:	c7 40 14 6e 20 64 6f 	movl   $0x6f64206e,0x14(%eax)
+ 80494fb:	c7 40 18 20 61 6e 79 	movl   $0x796e6120,0x18(%eax)
+ 8049502:	c7 40 1c 74 68 69 6e 	movl   $0x6e696874,0x1c(%eax)
+ 8049509:	c7 40 20 67 20 49 20 	movl   $0x20492067,0x20(%eax)
+ 8049510:	c7 40 24 77 61 6e 74 	movl   $0x746e6177,0x24(%eax)
+ 8049517:	66 c7 40 28 2e 00    	movw   $0x2e,0x28(%eax)
+ 804951d:	c6 40 11 62          	movb   $0x62,0x11(%eax)
+ 8049521:	83 c4 08             	add    $0x8,%esp
+ 8049524:	50                   	push   %eax
+ 8049525:	ff 74 24 1c          	push   0x1c(%esp)
+ 8049529:	e8 c5 05 00 00       	call   8049af3 <strings_not_equal>
+ 804952e:	83 c4 10             	add    $0x10,%esp
+ 8049531:	85 c0                	test   %eax,%eax
+ 8049533:	75 05                	jne    804953a <phase_3+0x8e>
+ 8049535:	83 c4 08             	add    $0x8,%esp
+ 8049538:	5b                   	pop    %ebx
+ 8049539:	c3                   	ret    
+ 804953a:	e8 51 08 00 00       	call   8049d90 <explode_bomb>
+ 804953f:	eb f4                	jmp    8049535 <phase_3+0x89>
+
+08049541 <phase_4>:
+ 8049541:	57                   	push   %edi
+ 8049542:	56                   	push   %esi
+ 8049543:	53                   	push   %ebx
+ 8049544:	83 ec 28             	sub    $0x28,%esp
+ 8049547:	e8 24 fd ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 804954c:	81 c3 b4 4a 00 00    	add    $0x4ab4,%ebx
+ 8049552:	8d 44 24 10          	lea    0x10(%esp),%eax
+ 8049556:	50                   	push   %eax
+ 8049557:	ff 74 24 3c          	push   0x3c(%esp)
+ 804955b:	e8 7f 08 00 00       	call   8049ddf <read_six_numbers>
+ 8049560:	83 c4 10             	add    $0x10,%esp
+ 8049563:	83 7c 24 08 01       	cmpl   $0x1,0x8(%esp)
+ 8049568:	75 0a                	jne    8049574 <phase_4+0x33>
+ 804956a:	8d 74 24 08          	lea    0x8(%esp),%esi
+ 804956e:	8d 7c 24 1c          	lea    0x1c(%esp),%edi
+ 8049572:	eb 0e                	jmp    8049582 <phase_4+0x41>
+ 8049574:	e8 17 08 00 00       	call   8049d90 <explode_bomb>
+ 8049579:	eb ef                	jmp    804956a <phase_4+0x29>
+ 804957b:	83 c6 04             	add    $0x4,%esi
+ 804957e:	39 fe                	cmp    %edi,%esi
+ 8049580:	74 11                	je     8049593 <phase_4+0x52>
+ 8049582:	8b 06                	mov    (%esi),%eax
+ 8049584:	c1 e0 02             	shl    $0x2,%eax
+ 8049587:	39 46 04             	cmp    %eax,0x4(%esi)
+ 804958a:	74 ef                	je     804957b <phase_4+0x3a>
+ 804958c:	e8 ff 07 00 00       	call   8049d90 <explode_bomb>
+ 8049591:	eb e8                	jmp    804957b <phase_4+0x3a>
+ 8049593:	83 c4 20             	add    $0x20,%esp
+ 8049596:	5b                   	pop    %ebx
+ 8049597:	5e                   	pop    %esi
+ 8049598:	5f                   	pop    %edi
+ 8049599:	c3                   	ret    
+
+0804959a <phase_5>:
+ 804959a:	53                   	push   %ebx
+ 804959b:	83 ec 24             	sub    $0x24,%esp
+ 804959e:	e8 cd fc ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 80495a3:	81 c3 5d 4a 00 00    	add    $0x4a5d,%ebx
+ 80495a9:	8d 44 24 14          	lea    0x14(%esp),%eax
+ 80495ad:	50                   	push   %eax
+ 80495ae:	8d 44 24 17          	lea    0x17(%esp),%eax
+ 80495b2:	50                   	push   %eax
+ 80495b3:	8d 44 24 20          	lea    0x20(%esp),%eax
+ 80495b7:	50                   	push   %eax
+ 80495b8:	8d 83 ce d0 ff ff    	lea    -0x2f32(%ebx),%eax
+ 80495be:	50                   	push   %eax
+ 80495bf:	ff 74 24 3c          	push   0x3c(%esp)
+ 80495c3:	e8 98 fb ff ff       	call   8049160 <__isoc99_sscanf@plt>
+ 80495c8:	83 c4 20             	add    $0x20,%esp
+ 80495cb:	83 f8 02             	cmp    $0x2,%eax
+ 80495ce:	7e 1a                	jle    80495ea <phase_5+0x50>
+ 80495d0:	83 7c 24 0c 07       	cmpl   $0x7,0xc(%esp)
+ 80495d5:	0f 87 04 01 00 00    	ja     80496df <.L26+0x1b>
+ 80495db:	8b 44 24 0c          	mov    0xc(%esp),%eax
+ 80495df:	89 da                	mov    %ebx,%edx
+ 80495e1:	03 94 83 34 d1 ff ff 	add    -0x2ecc(%ebx,%eax,4),%edx
+ 80495e8:	ff e2                	jmp    *%edx
+ 80495ea:	e8 a1 07 00 00       	call   8049d90 <explode_bomb>
+ 80495ef:	eb df                	jmp    80495d0 <phase_5+0x36>
+
+080495f1 <.L34>:
+ 80495f1:	b8 72 00 00 00       	mov    $0x72,%eax
+ 80495f6:	81 7c 24 08 52 03 00 	cmpl   $0x352,0x8(%esp)
+ 80495fd:	00 
+ 80495fe:	0f 84 e5 00 00 00    	je     80496e9 <.L26+0x25>
+ 8049604:	e8 87 07 00 00       	call   8049d90 <explode_bomb>
+ 8049609:	b8 72 00 00 00       	mov    $0x72,%eax
+ 804960e:	e9 d6 00 00 00       	jmp    80496e9 <.L26+0x25>
+
+08049613 <.L33>:
+ 8049613:	b8 64 00 00 00       	mov    $0x64,%eax
+ 8049618:	83 7c 24 08 7d       	cmpl   $0x7d,0x8(%esp)
+ 804961d:	0f 84 c6 00 00 00    	je     80496e9 <.L26+0x25>
+ 8049623:	e8 68 07 00 00       	call   8049d90 <explode_bomb>
+ 8049628:	b8 64 00 00 00       	mov    $0x64,%eax
+ 804962d:	e9 b7 00 00 00       	jmp    80496e9 <.L26+0x25>
+
+08049632 <.L32>:
+ 8049632:	b8 70 00 00 00       	mov    $0x70,%eax
+ 8049637:	81 7c 24 08 85 01 00 	cmpl   $0x185,0x8(%esp)
+ 804963e:	00 
+ 804963f:	0f 84 a4 00 00 00    	je     80496e9 <.L26+0x25>
+ 8049645:	e8 46 07 00 00       	call   8049d90 <explode_bomb>
+ 804964a:	b8 70 00 00 00       	mov    $0x70,%eax
+ 804964f:	e9 95 00 00 00       	jmp    80496e9 <.L26+0x25>
+
+08049654 <.L31>:
+ 8049654:	b8 6b 00 00 00       	mov    $0x6b,%eax
+ 8049659:	81 7c 24 08 76 02 00 	cmpl   $0x276,0x8(%esp)
+ 8049660:	00 
+ 8049661:	0f 84 82 00 00 00    	je     80496e9 <.L26+0x25>
+ 8049667:	e8 24 07 00 00       	call   8049d90 <explode_bomb>
+ 804966c:	b8 6b 00 00 00       	mov    $0x6b,%eax
+ 8049671:	eb 76                	jmp    80496e9 <.L26+0x25>
+
+08049673 <.L30>:
+ 8049673:	b8 6c 00 00 00       	mov    $0x6c,%eax
+ 8049678:	81 7c 24 08 e4 01 00 	cmpl   $0x1e4,0x8(%esp)
+ 804967f:	00 
+ 8049680:	74 67                	je     80496e9 <.L26+0x25>
+ 8049682:	e8 09 07 00 00       	call   8049d90 <explode_bomb>
+ 8049687:	b8 6c 00 00 00       	mov    $0x6c,%eax
+ 804968c:	eb 5b                	jmp    80496e9 <.L26+0x25>
+
+0804968e <.L29>:
+ 804968e:	b8 71 00 00 00       	mov    $0x71,%eax
+ 8049693:	81 7c 24 08 19 02 00 	cmpl   $0x219,0x8(%esp)
+ 804969a:	00 
+ 804969b:	74 4c                	je     80496e9 <.L26+0x25>
+ 804969d:	e8 ee 06 00 00       	call   8049d90 <explode_bomb>
+ 80496a2:	b8 71 00 00 00       	mov    $0x71,%eax
+ 80496a7:	eb 40                	jmp    80496e9 <.L26+0x25>
+
+080496a9 <.L28>:
+ 80496a9:	b8 6b 00 00 00       	mov    $0x6b,%eax
+ 80496ae:	81 7c 24 08 1c 02 00 	cmpl   $0x21c,0x8(%esp)
+ 80496b5:	00 
+ 80496b6:	74 31                	je     80496e9 <.L26+0x25>
+ 80496b8:	e8 d3 06 00 00       	call   8049d90 <explode_bomb>
+ 80496bd:	b8 6b 00 00 00       	mov    $0x6b,%eax
+ 80496c2:	eb 25                	jmp    80496e9 <.L26+0x25>
+
+080496c4 <.L26>:
+ 80496c4:	b8 64 00 00 00       	mov    $0x64,%eax
+ 80496c9:	81 7c 24 08 7f 01 00 	cmpl   $0x17f,0x8(%esp)
+ 80496d0:	00 
+ 80496d1:	74 16                	je     80496e9 <.L26+0x25>
+ 80496d3:	e8 b8 06 00 00       	call   8049d90 <explode_bomb>
+ 80496d8:	b8 64 00 00 00       	mov    $0x64,%eax
+ 80496dd:	eb 0a                	jmp    80496e9 <.L26+0x25>
+ 80496df:	e8 ac 06 00 00       	call   8049d90 <explode_bomb>
+ 80496e4:	b8 6c 00 00 00       	mov    $0x6c,%eax
+ 80496e9:	38 44 24 07          	cmp    %al,0x7(%esp)
+ 80496ed:	75 05                	jne    80496f4 <.L26+0x30>
+ 80496ef:	83 c4 18             	add    $0x18,%esp
+ 80496f2:	5b                   	pop    %ebx
+ 80496f3:	c3                   	ret    
+ 80496f4:	e8 97 06 00 00       	call   8049d90 <explode_bomb>
+ 80496f9:	eb f4                	jmp    80496ef <.L26+0x2b>
+
+080496fb <func6>:
+ 80496fb:	53                   	push   %ebx
+ 80496fc:	83 ec 08             	sub    $0x8,%esp
+ 80496ff:	8b 44 24 10          	mov    0x10(%esp),%eax
+ 8049703:	8b 4c 24 18          	mov    0x18(%esp),%ecx
+ 8049707:	89 ca                	mov    %ecx,%edx
+ 8049709:	2b 54 24 14          	sub    0x14(%esp),%edx
+ 804970d:	89 d3                	mov    %edx,%ebx
+ 804970f:	c1 eb 1f             	shr    $0x1f,%ebx
+ 8049712:	01 d3                	add    %edx,%ebx
+ 8049714:	d1 fb                	sar    %ebx
+ 8049716:	03 5c 24 14          	add    0x14(%esp),%ebx
+ 804971a:	39 c3                	cmp    %eax,%ebx
+ 804971c:	7f 09                	jg     8049727 <func6+0x2c>
+ 804971e:	7c 1f                	jl     804973f <func6+0x44>
+ 8049720:	89 d8                	mov    %ebx,%eax
+ 8049722:	83 c4 08             	add    $0x8,%esp
+ 8049725:	5b                   	pop    %ebx
+ 8049726:	c3                   	ret    
+ 8049727:	83 ec 04             	sub    $0x4,%esp
+ 804972a:	8d 53 ff             	lea    -0x1(%ebx),%edx
+ 804972d:	52                   	push   %edx
+ 804972e:	ff 74 24 1c          	push   0x1c(%esp)
+ 8049732:	50                   	push   %eax
+ 8049733:	e8 c3 ff ff ff       	call   80496fb <func6>
+ 8049738:	83 c4 10             	add    $0x10,%esp
+ 804973b:	01 c3                	add    %eax,%ebx
+ 804973d:	eb e1                	jmp    8049720 <func6+0x25>
+ 804973f:	83 ec 04             	sub    $0x4,%esp
+ 8049742:	51                   	push   %ecx
+ 8049743:	8d 53 01             	lea    0x1(%ebx),%edx
+ 8049746:	52                   	push   %edx
+ 8049747:	50                   	push   %eax
+ 8049748:	e8 ae ff ff ff       	call   80496fb <func6>
+ 804974d:	83 c4 10             	add    $0x10,%esp
+ 8049750:	01 c3                	add    %eax,%ebx
+ 8049752:	eb cc                	jmp    8049720 <func6+0x25>
+
+08049754 <phase_6>:
+ 8049754:	53                   	push   %ebx
+ 8049755:	83 ec 18             	sub    $0x18,%esp
+ 8049758:	e8 13 fb ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 804975d:	81 c3 a3 48 00 00    	add    $0x48a3,%ebx
+ 8049763:	8d 44 24 08          	lea    0x8(%esp),%eax
+ 8049767:	50                   	push   %eax
+ 8049768:	8d 44 24 10          	lea    0x10(%esp),%eax
+ 804976c:	50                   	push   %eax
+ 804976d:	8d 83 21 d3 ff ff    	lea    -0x2cdf(%ebx),%eax
+ 8049773:	50                   	push   %eax
+ 8049774:	ff 74 24 2c          	push   0x2c(%esp)
+ 8049778:	e8 e3 f9 ff ff       	call   8049160 <__isoc99_sscanf@plt>
+ 804977d:	83 c4 10             	add    $0x10,%esp
+ 8049780:	83 f8 02             	cmp    $0x2,%eax
+ 8049783:	75 07                	jne    804978c <phase_6+0x38>
+ 8049785:	83 7c 24 0c 0e       	cmpl   $0xe,0xc(%esp)
+ 804978a:	76 05                	jbe    8049791 <phase_6+0x3d>
+ 804978c:	e8 ff 05 00 00       	call   8049d90 <explode_bomb>
+ 8049791:	83 ec 04             	sub    $0x4,%esp
+ 8049794:	6a 0e                	push   $0xe
+ 8049796:	6a 00                	push   $0x0
+ 8049798:	ff 74 24 18          	push   0x18(%esp)
+ 804979c:	e8 5a ff ff ff       	call   80496fb <func6>
+ 80497a1:	83 c4 10             	add    $0x10,%esp
+ 80497a4:	83 f8 23             	cmp    $0x23,%eax
+ 80497a7:	75 07                	jne    80497b0 <phase_6+0x5c>
+ 80497a9:	83 7c 24 08 23       	cmpl   $0x23,0x8(%esp)
+ 80497ae:	74 05                	je     80497b5 <phase_6+0x61>
+ 80497b0:	e8 db 05 00 00       	call   8049d90 <explode_bomb>
+ 80497b5:	83 c4 18             	add    $0x18,%esp
+ 80497b8:	5b                   	pop    %ebx
+ 80497b9:	c3                   	ret    
+
+080497ba <phase_7>:
+ 80497ba:	56                   	push   %esi
+ 80497bb:	53                   	push   %ebx
+ 80497bc:	83 ec 20             	sub    $0x20,%esp
+ 80497bf:	e8 ac fa ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 80497c4:	81 c3 3c 48 00 00    	add    $0x483c,%ebx
+ 80497ca:	8b 74 24 2c          	mov    0x2c(%esp),%esi
+ 80497ce:	56                   	push   %esi
+ 80497cf:	e8 01 03 00 00       	call   8049ad5 <string_length>
+ 80497d4:	83 c4 10             	add    $0x10,%esp
+ 80497d7:	83 f8 06             	cmp    $0x6,%eax
+ 80497da:	75 48                	jne    8049824 <phase_7+0x6a>
+ 80497dc:	b8 00 00 00 00       	mov    $0x0,%eax
+ 80497e1:	8d 8b 54 d1 ff ff    	lea    -0x2eac(%ebx),%ecx
+ 80497e7:	0f b6 14 06          	movzbl (%esi,%eax,1),%edx
+ 80497eb:	83 e2 0f             	and    $0xf,%edx
+ 80497ee:	0f b6 14 11          	movzbl (%ecx,%edx,1),%edx
+ 80497f2:	88 54 04 09          	mov    %dl,0x9(%esp,%eax,1)
+ 80497f6:	83 c0 01             	add    $0x1,%eax
+ 80497f9:	83 f8 06             	cmp    $0x6,%eax
+ 80497fc:	75 e9                	jne    80497e7 <phase_7+0x2d>
+ 80497fe:	c6 44 24 0f 00       	movb   $0x0,0xf(%esp)
+ 8049803:	83 ec 08             	sub    $0x8,%esp
+ 8049806:	8d 83 d7 d0 ff ff    	lea    -0x2f29(%ebx),%eax
+ 804980c:	50                   	push   %eax
+ 804980d:	8d 44 24 15          	lea    0x15(%esp),%eax
+ 8049811:	50                   	push   %eax
+ 8049812:	e8 dc 02 00 00       	call   8049af3 <strings_not_equal>
+ 8049817:	83 c4 10             	add    $0x10,%esp
+ 804981a:	85 c0                	test   %eax,%eax
+ 804981c:	75 0d                	jne    804982b <phase_7+0x71>
+ 804981e:	83 c4 14             	add    $0x14,%esp
+ 8049821:	5b                   	pop    %ebx
+ 8049822:	5e                   	pop    %esi
+ 8049823:	c3                   	ret    
+ 8049824:	e8 67 05 00 00       	call   8049d90 <explode_bomb>
+ 8049829:	eb b1                	jmp    80497dc <phase_7+0x22>
+ 804982b:	e8 60 05 00 00       	call   8049d90 <explode_bomb>
+ 8049830:	eb ec                	jmp    804981e <phase_7+0x64>
+
+08049832 <phase_8>:
+ 8049832:	55                   	push   %ebp
+ 8049833:	57                   	push   %edi
+ 8049834:	56                   	push   %esi
+ 8049835:	53                   	push   %ebx
+ 8049836:	83 ec 54             	sub    $0x54,%esp
+ 8049839:	e8 32 fa ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 804983e:	81 c3 c2 47 00 00    	add    $0x47c2,%ebx
+ 8049844:	8d 74 24 30          	lea    0x30(%esp),%esi
+ 8049848:	56                   	push   %esi
+ 8049849:	ff 74 24 6c          	push   0x6c(%esp)
+ 804984d:	e8 8d 05 00 00       	call   8049ddf <read_six_numbers>
+ 8049852:	89 74 24 18          	mov    %esi,0x18(%esp)
+ 8049856:	83 c4 10             	add    $0x10,%esp
+ 8049859:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%esp)
+ 8049860:	00 
+ 8049861:	89 f5                	mov    %esi,%ebp
+ 8049863:	eb 23                	jmp    8049888 <phase_8+0x56>
+ 8049865:	e8 26 05 00 00       	call   8049d90 <explode_bomb>
+ 804986a:	eb 30                	jmp    804989c <phase_8+0x6a>
+ 804986c:	83 c6 01             	add    $0x1,%esi
+ 804986f:	83 fe 06             	cmp    $0x6,%esi
+ 8049872:	74 0f                	je     8049883 <phase_8+0x51>
+ 8049874:	8b 44 b5 00          	mov    0x0(%ebp,%esi,4),%eax
+ 8049878:	39 07                	cmp    %eax,(%edi)
+ 804987a:	75 f0                	jne    804986c <phase_8+0x3a>
+ 804987c:	e8 0f 05 00 00       	call   8049d90 <explode_bomb>
+ 8049881:	eb e9                	jmp    804986c <phase_8+0x3a>
+ 8049883:	83 44 24 08 04       	addl   $0x4,0x8(%esp)
+ 8049888:	8b 44 24 08          	mov    0x8(%esp),%eax
+ 804988c:	89 c7                	mov    %eax,%edi
+ 804988e:	8b 00                	mov    (%eax),%eax
+ 8049890:	89 44 24 0c          	mov    %eax,0xc(%esp)
+ 8049894:	83 e8 01             	sub    $0x1,%eax
+ 8049897:	83 f8 05             	cmp    $0x5,%eax
+ 804989a:	77 c9                	ja     8049865 <phase_8+0x33>
+ 804989c:	83 44 24 04 01       	addl   $0x1,0x4(%esp)
+ 80498a1:	8b 74 24 04          	mov    0x4(%esp),%esi
+ 80498a5:	83 fe 05             	cmp    $0x5,%esi
+ 80498a8:	7e ca                	jle    8049874 <phase_8+0x42>
+ 80498aa:	be 00 00 00 00       	mov    $0x0,%esi
+ 80498af:	89 f7                	mov    %esi,%edi
+ 80498b1:	8b 4c b4 28          	mov    0x28(%esp,%esi,4),%ecx
+ 80498b5:	b8 01 00 00 00       	mov    $0x1,%eax
+ 80498ba:	8d 93 98 05 00 00    	lea    0x598(%ebx),%edx
+ 80498c0:	83 f9 01             	cmp    $0x1,%ecx
+ 80498c3:	7e 0a                	jle    80498cf <phase_8+0x9d>
+ 80498c5:	8b 52 08             	mov    0x8(%edx),%edx
+ 80498c8:	83 c0 01             	add    $0x1,%eax
+ 80498cb:	39 c8                	cmp    %ecx,%eax
+ 80498cd:	75 f6                	jne    80498c5 <phase_8+0x93>
+ 80498cf:	89 54 bc 10          	mov    %edx,0x10(%esp,%edi,4)
+ 80498d3:	83 c6 01             	add    $0x1,%esi
+ 80498d6:	83 fe 06             	cmp    $0x6,%esi
+ 80498d9:	75 d4                	jne    80498af <phase_8+0x7d>
+ 80498db:	8b 74 24 10          	mov    0x10(%esp),%esi
+ 80498df:	8b 44 24 14          	mov    0x14(%esp),%eax
+ 80498e3:	89 46 08             	mov    %eax,0x8(%esi)
+ 80498e6:	8b 54 24 18          	mov    0x18(%esp),%edx
+ 80498ea:	89 50 08             	mov    %edx,0x8(%eax)
+ 80498ed:	8b 44 24 1c          	mov    0x1c(%esp),%eax
+ 80498f1:	89 42 08             	mov    %eax,0x8(%edx)
+ 80498f4:	8b 54 24 20          	mov    0x20(%esp),%edx
+ 80498f8:	89 50 08             	mov    %edx,0x8(%eax)
+ 80498fb:	8b 44 24 24          	mov    0x24(%esp),%eax
+ 80498ff:	89 42 08             	mov    %eax,0x8(%edx)
+ 8049902:	c7 40 08 00 00 00 00 	movl   $0x0,0x8(%eax)
+ 8049909:	bf 05 00 00 00       	mov    $0x5,%edi
+ 804990e:	eb 08                	jmp    8049918 <phase_8+0xe6>
+ 8049910:	8b 76 08             	mov    0x8(%esi),%esi
+ 8049913:	83 ef 01             	sub    $0x1,%edi
+ 8049916:	74 10                	je     8049928 <phase_8+0xf6>
+ 8049918:	8b 46 08             	mov    0x8(%esi),%eax
+ 804991b:	8b 00                	mov    (%eax),%eax
+ 804991d:	39 06                	cmp    %eax,(%esi)
+ 804991f:	7d ef                	jge    8049910 <phase_8+0xde>
+ 8049921:	e8 6a 04 00 00       	call   8049d90 <explode_bomb>
+ 8049926:	eb e8                	jmp    8049910 <phase_8+0xde>
+ 8049928:	83 c4 4c             	add    $0x4c,%esp
+ 804992b:	5b                   	pop    %ebx
+ 804992c:	5e                   	pop    %esi
+ 804992d:	5f                   	pop    %edi
+ 804992e:	5d                   	pop    %ebp
+ 804992f:	c3                   	ret    
+
+08049930 <fun9>:
+ 8049930:	53                   	push   %ebx
+ 8049931:	83 ec 08             	sub    $0x8,%esp
+ 8049934:	8b 54 24 10          	mov    0x10(%esp),%edx
+ 8049938:	8b 4c 24 14          	mov    0x14(%esp),%ecx
+ 804993c:	85 d2                	test   %edx,%edx
+ 804993e:	74 3a                	je     804997a <fun9+0x4a>
+ 8049940:	8b 1a                	mov    (%edx),%ebx
+ 8049942:	39 cb                	cmp    %ecx,%ebx
+ 8049944:	7f 0c                	jg     8049952 <fun9+0x22>
+ 8049946:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804994b:	75 18                	jne    8049965 <fun9+0x35>
+ 804994d:	83 c4 08             	add    $0x8,%esp
+ 8049950:	5b                   	pop    %ebx
+ 8049951:	c3                   	ret    
+ 8049952:	83 ec 08             	sub    $0x8,%esp
+ 8049955:	51                   	push   %ecx
+ 8049956:	ff 72 04             	push   0x4(%edx)
+ 8049959:	e8 d2 ff ff ff       	call   8049930 <fun9>
+ 804995e:	83 c4 10             	add    $0x10,%esp
+ 8049961:	01 c0                	add    %eax,%eax
+ 8049963:	eb e8                	jmp    804994d <fun9+0x1d>
+ 8049965:	83 ec 08             	sub    $0x8,%esp
+ 8049968:	51                   	push   %ecx
+ 8049969:	ff 72 08             	push   0x8(%edx)
+ 804996c:	e8 bf ff ff ff       	call   8049930 <fun9>
+ 8049971:	83 c4 10             	add    $0x10,%esp
+ 8049974:	8d 44 00 01          	lea    0x1(%eax,%eax,1),%eax
+ 8049978:	eb d3                	jmp    804994d <fun9+0x1d>
+ 804997a:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804997f:	eb cc                	jmp    804994d <fun9+0x1d>
+
+08049981 <phase_9>:
+ 8049981:	56                   	push   %esi
+ 8049982:	53                   	push   %ebx
+ 8049983:	83 ec 08             	sub    $0x8,%esp
+ 8049986:	e8 e5 f8 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 804998b:	81 c3 75 46 00 00    	add    $0x4675,%ebx
+ 8049991:	6a 0a                	push   $0xa
+ 8049993:	6a 00                	push   $0x0
+ 8049995:	ff 74 24 1c          	push   0x1c(%esp)
+ 8049999:	e8 32 f8 ff ff       	call   80491d0 <strtol@plt>
+ 804999e:	89 c6                	mov    %eax,%esi
+ 80499a0:	8d 40 ff             	lea    -0x1(%eax),%eax
+ 80499a3:	83 c4 10             	add    $0x10,%esp
+ 80499a6:	3d ec 03 00 00       	cmp    $0x3ec,%eax
+ 80499ab:	77 1e                	ja     80499cb <phase_9+0x4a>
+ 80499ad:	83 ec 08             	sub    $0x8,%esp
+ 80499b0:	56                   	push   %esi
+ 80499b1:	8d 83 44 05 00 00    	lea    0x544(%ebx),%eax
+ 80499b7:	50                   	push   %eax
+ 80499b8:	e8 73 ff ff ff       	call   8049930 <fun9>
+ 80499bd:	83 c4 10             	add    $0x10,%esp
+ 80499c0:	83 f8 01             	cmp    $0x1,%eax
+ 80499c3:	75 0d                	jne    80499d2 <phase_9+0x51>
+ 80499c5:	83 c4 04             	add    $0x4,%esp
+ 80499c8:	5b                   	pop    %ebx
+ 80499c9:	5e                   	pop    %esi
+ 80499ca:	c3                   	ret    
+ 80499cb:	e8 c0 03 00 00       	call   8049d90 <explode_bomb>
+ 80499d0:	eb db                	jmp    80499ad <phase_9+0x2c>
+ 80499d2:	e8 b9 03 00 00       	call   8049d90 <explode_bomb>
+ 80499d7:	eb ec                	jmp    80499c5 <phase_9+0x44>
+
+080499d9 <phase_10>:
+ 80499d9:	53                   	push   %ebx
+ 80499da:	83 ec 18             	sub    $0x18,%esp
+ 80499dd:	e8 8e f8 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 80499e2:	81 c3 1e 46 00 00    	add    $0x461e,%ebx
+ 80499e8:	c7 44 24 0c dd 03 00 	movl   $0x3dd,0xc(%esp)
+ 80499ef:	00 
+ 80499f0:	c7 44 24 02 00 00 00 	movl   $0x0,0x2(%esp)
+ 80499f7:	00 
+ 80499f8:	c7 44 24 06 00 00 00 	movl   $0x0,0x6(%esp)
+ 80499ff:	00 
+ 8049a00:	66 c7 44 24 0a 00 00 	movw   $0x0,0xa(%esp)
+ 8049a07:	8d 44 24 0c          	lea    0xc(%esp),%eax
+ 8049a0b:	50                   	push   %eax
+ 8049a0c:	8d 44 24 06          	lea    0x6(%esp),%eax
+ 8049a10:	50                   	push   %eax
+ 8049a11:	8d 83 f2 d2 ff ff    	lea    -0x2d0e(%ebx),%eax
+ 8049a17:	50                   	push   %eax
+ 8049a18:	ff 74 24 2c          	push   0x2c(%esp)
+ 8049a1c:	e8 3f f7 ff ff       	call   8049160 <__isoc99_sscanf@plt>
+ 8049a21:	83 c4 10             	add    $0x10,%esp
+ 8049a24:	81 7c 24 0c 24 20 69 	cmpl   $0x2a692024,0xc(%esp)
+ 8049a2b:	2a 
+ 8049a2c:	75 05                	jne    8049a33 <phase_10+0x5a>
+ 8049a2e:	83 c4 18             	add    $0x18,%esp
+ 8049a31:	5b                   	pop    %ebx
+ 8049a32:	c3                   	ret    
+ 8049a33:	e8 58 03 00 00       	call   8049d90 <explode_bomb>
+ 8049a38:	eb f4                	jmp    8049a2e <phase_10+0x55>
+
+08049a3a <sig_handler>:
+ 8049a3a:	53                   	push   %ebx
+ 8049a3b:	83 ec 14             	sub    $0x14,%esp
+ 8049a3e:	e8 2d f8 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049a43:	81 c3 bd 45 00 00    	add    $0x45bd,%ebx
+ 8049a49:	8d 83 64 d1 ff ff    	lea    -0x2e9c(%ebx),%eax
+ 8049a4f:	50                   	push   %eax
+ 8049a50:	e8 ab f6 ff ff       	call   8049100 <puts@plt>
+ 8049a55:	c7 04 24 03 00 00 00 	movl   $0x3,(%esp)
+ 8049a5c:	e8 3f f6 ff ff       	call   80490a0 <sleep@plt>
+ 8049a61:	83 c4 08             	add    $0x8,%esp
+ 8049a64:	8d 83 9d d2 ff ff    	lea    -0x2d63(%ebx),%eax
+ 8049a6a:	50                   	push   %eax
+ 8049a6b:	6a 01                	push   $0x1
+ 8049a6d:	e8 1e f7 ff ff       	call   8049190 <__printf_chk@plt>
+ 8049a72:	83 c4 04             	add    $0x4,%esp
+ 8049a75:	8b 83 f8 ff ff ff    	mov    -0x8(%ebx),%eax
+ 8049a7b:	ff 30                	push   (%eax)
+ 8049a7d:	e8 ee f5 ff ff       	call   8049070 <fflush@plt>
+ 8049a82:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+ 8049a89:	e8 12 f6 ff ff       	call   80490a0 <sleep@plt>
+ 8049a8e:	8d 83 a5 d2 ff ff    	lea    -0x2d5b(%ebx),%eax
+ 8049a94:	89 04 24             	mov    %eax,(%esp)
+ 8049a97:	e8 64 f6 ff ff       	call   8049100 <puts@plt>
+ 8049a9c:	c7 04 24 10 00 00 00 	movl   $0x10,(%esp)
+ 8049aa3:	e8 78 f6 ff ff       	call   8049120 <exit@plt>
+
+08049aa8 <invalid_phase>:
+ 8049aa8:	53                   	push   %ebx
+ 8049aa9:	83 ec 0c             	sub    $0xc,%esp
+ 8049aac:	e8 bf f7 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049ab1:	81 c3 4f 45 00 00    	add    $0x454f,%ebx
+ 8049ab7:	ff 74 24 14          	push   0x14(%esp)
+ 8049abb:	8d 83 ad d2 ff ff    	lea    -0x2d53(%ebx),%eax
+ 8049ac1:	50                   	push   %eax
+ 8049ac2:	6a 01                	push   $0x1
+ 8049ac4:	e8 c7 f6 ff ff       	call   8049190 <__printf_chk@plt>
+ 8049ac9:	c7 04 24 08 00 00 00 	movl   $0x8,(%esp)
+ 8049ad0:	e8 4b f6 ff ff       	call   8049120 <exit@plt>
+
+08049ad5 <string_length>:
+ 8049ad5:	8b 54 24 04          	mov    0x4(%esp),%edx
+ 8049ad9:	80 3a 00             	cmpb   $0x0,(%edx)
+ 8049adc:	74 0f                	je     8049aed <string_length+0x18>
+ 8049ade:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8049ae3:	83 c0 01             	add    $0x1,%eax
+ 8049ae6:	80 3c 02 00          	cmpb   $0x0,(%edx,%eax,1)
+ 8049aea:	75 f7                	jne    8049ae3 <string_length+0xe>
+ 8049aec:	c3                   	ret    
+ 8049aed:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8049af2:	c3                   	ret    
+
+08049af3 <strings_not_equal>:
+ 8049af3:	57                   	push   %edi
+ 8049af4:	56                   	push   %esi
+ 8049af5:	53                   	push   %ebx
+ 8049af6:	8b 5c 24 10          	mov    0x10(%esp),%ebx
+ 8049afa:	8b 74 24 14          	mov    0x14(%esp),%esi
+ 8049afe:	53                   	push   %ebx
+ 8049aff:	e8 d1 ff ff ff       	call   8049ad5 <string_length>
+ 8049b04:	89 c7                	mov    %eax,%edi
+ 8049b06:	89 34 24             	mov    %esi,(%esp)
+ 8049b09:	e8 c7 ff ff ff       	call   8049ad5 <string_length>
+ 8049b0e:	83 c4 04             	add    $0x4,%esp
+ 8049b11:	89 c2                	mov    %eax,%edx
+ 8049b13:	b8 01 00 00 00       	mov    $0x1,%eax
+ 8049b18:	39 d7                	cmp    %edx,%edi
+ 8049b1a:	75 2b                	jne    8049b47 <strings_not_equal+0x54>
+ 8049b1c:	0f b6 03             	movzbl (%ebx),%eax
+ 8049b1f:	84 c0                	test   %al,%al
+ 8049b21:	74 18                	je     8049b3b <strings_not_equal+0x48>
+ 8049b23:	38 06                	cmp    %al,(%esi)
+ 8049b25:	75 1b                	jne    8049b42 <strings_not_equal+0x4f>
+ 8049b27:	83 c3 01             	add    $0x1,%ebx
+ 8049b2a:	83 c6 01             	add    $0x1,%esi
+ 8049b2d:	0f b6 03             	movzbl (%ebx),%eax
+ 8049b30:	84 c0                	test   %al,%al
+ 8049b32:	75 ef                	jne    8049b23 <strings_not_equal+0x30>
+ 8049b34:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8049b39:	eb 0c                	jmp    8049b47 <strings_not_equal+0x54>
+ 8049b3b:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8049b40:	eb 05                	jmp    8049b47 <strings_not_equal+0x54>
+ 8049b42:	b8 01 00 00 00       	mov    $0x1,%eax
+ 8049b47:	5b                   	pop    %ebx
+ 8049b48:	5e                   	pop    %esi
+ 8049b49:	5f                   	pop    %edi
+ 8049b4a:	c3                   	ret    
+
+08049b4b <initialize_bomb>:
+ 8049b4b:	57                   	push   %edi
+ 8049b4c:	56                   	push   %esi
+ 8049b4d:	53                   	push   %ebx
+ 8049b4e:	81 ec 00 10 00 00    	sub    $0x1000,%esp
+ 8049b54:	83 0c 24 00          	orl    $0x0,(%esp)
+ 8049b58:	81 ec 00 10 00 00    	sub    $0x1000,%esp
+ 8049b5e:	83 0c 24 00          	orl    $0x0,(%esp)
+ 8049b62:	83 ec 48             	sub    $0x48,%esp
+ 8049b65:	e8 06 f7 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049b6a:	81 c3 96 44 00 00    	add    $0x4496,%ebx
+ 8049b70:	8d 83 3a ba ff ff    	lea    -0x45c6(%ebx),%eax
+ 8049b76:	50                   	push   %eax
+ 8049b77:	6a 02                	push   $0x2
+ 8049b79:	e8 12 f5 ff ff       	call   8049090 <signal@plt>
+ 8049b7e:	83 c4 08             	add    $0x8,%esp
+ 8049b81:	6a 40                	push   $0x40
+ 8049b83:	8d 84 24 0c 20 00 00 	lea    0x200c(%esp),%eax
+ 8049b8a:	50                   	push   %eax
+ 8049b8b:	e8 40 f5 ff ff       	call   80490d0 <gethostname@plt>
+ 8049b90:	83 c4 10             	add    $0x10,%esp
+ 8049b93:	85 c0                	test   %eax,%eax
+ 8049b95:	75 4d                	jne    8049be4 <initialize_bomb+0x99>
+ 8049b97:	8b 83 e0 05 00 00    	mov    0x5e0(%ebx),%eax
+ 8049b9d:	8d b3 e4 05 00 00    	lea    0x5e4(%ebx),%esi
+ 8049ba3:	8d bc 24 00 20 00 00 	lea    0x2000(%esp),%edi
+ 8049baa:	85 c0                	test   %eax,%eax
+ 8049bac:	74 1b                	je     8049bc9 <initialize_bomb+0x7e>
+ 8049bae:	83 ec 08             	sub    $0x8,%esp
+ 8049bb1:	57                   	push   %edi
+ 8049bb2:	50                   	push   %eax
+ 8049bb3:	e8 98 f5 ff ff       	call   8049150 <strcasecmp@plt>
+ 8049bb8:	83 c4 10             	add    $0x10,%esp
+ 8049bbb:	85 c0                	test   %eax,%eax
+ 8049bbd:	74 62                	je     8049c21 <initialize_bomb+0xd6>
+ 8049bbf:	83 c6 04             	add    $0x4,%esi
+ 8049bc2:	8b 46 fc             	mov    -0x4(%esi),%eax
+ 8049bc5:	85 c0                	test   %eax,%eax
+ 8049bc7:	75 e5                	jne    8049bae <initialize_bomb+0x63>
+ 8049bc9:	83 ec 0c             	sub    $0xc,%esp
+ 8049bcc:	8d 83 d4 d1 ff ff    	lea    -0x2e2c(%ebx),%eax
+ 8049bd2:	50                   	push   %eax
+ 8049bd3:	e8 28 f5 ff ff       	call   8049100 <puts@plt>
+ 8049bd8:	c7 04 24 08 00 00 00 	movl   $0x8,(%esp)
+ 8049bdf:	e8 3c f5 ff ff       	call   8049120 <exit@plt>
+ 8049be4:	83 ec 0c             	sub    $0xc,%esp
+ 8049be7:	8d 83 9c d1 ff ff    	lea    -0x2e64(%ebx),%eax
+ 8049bed:	50                   	push   %eax
+ 8049bee:	e8 0d f5 ff ff       	call   8049100 <puts@plt>
+ 8049bf3:	c7 04 24 08 00 00 00 	movl   $0x8,(%esp)
+ 8049bfa:	e8 21 f5 ff ff       	call   8049120 <exit@plt>
+ 8049bff:	83 ec 04             	sub    $0x4,%esp
+ 8049c02:	8d 44 24 04          	lea    0x4(%esp),%eax
+ 8049c06:	50                   	push   %eax
+ 8049c07:	8d 83 be d2 ff ff    	lea    -0x2d42(%ebx),%eax
+ 8049c0d:	50                   	push   %eax
+ 8049c0e:	6a 01                	push   $0x1
+ 8049c10:	e8 7b f5 ff ff       	call   8049190 <__printf_chk@plt>
+ 8049c15:	c7 04 24 08 00 00 00 	movl   $0x8,(%esp)
+ 8049c1c:	e8 ff f4 ff ff       	call   8049120 <exit@plt>
+ 8049c21:	83 ec 0c             	sub    $0xc,%esp
+ 8049c24:	8d 44 24 0c          	lea    0xc(%esp),%eax
+ 8049c28:	50                   	push   %eax
+ 8049c29:	e8 9f 0c 00 00       	call   804a8cd <init_driver>
+ 8049c2e:	83 c4 10             	add    $0x10,%esp
+ 8049c31:	85 c0                	test   %eax,%eax
+ 8049c33:	78 ca                	js     8049bff <initialize_bomb+0xb4>
+ 8049c35:	81 c4 40 20 00 00    	add    $0x2040,%esp
+ 8049c3b:	5b                   	pop    %ebx
+ 8049c3c:	5e                   	pop    %esi
+ 8049c3d:	5f                   	pop    %edi
+ 8049c3e:	c3                   	ret    
+
+08049c3f <initialize_bomb_solve>:
+ 8049c3f:	c3                   	ret    
+
+08049c40 <blank_line>:
+ 8049c40:	57                   	push   %edi
+ 8049c41:	56                   	push   %esi
+ 8049c42:	53                   	push   %ebx
+ 8049c43:	e8 28 f6 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049c48:	81 c3 b8 43 00 00    	add    $0x43b8,%ebx
+ 8049c4e:	8b 7c 24 10          	mov    0x10(%esp),%edi
+ 8049c52:	0f b6 37             	movzbl (%edi),%esi
+ 8049c55:	89 f0                	mov    %esi,%eax
+ 8049c57:	84 c0                	test   %al,%al
+ 8049c59:	74 1d                	je     8049c78 <blank_line+0x38>
+ 8049c5b:	e8 a0 f5 ff ff       	call   8049200 <__ctype_b_loc@plt>
+ 8049c60:	83 c7 01             	add    $0x1,%edi
+ 8049c63:	89 f2                	mov    %esi,%edx
+ 8049c65:	0f be f2             	movsbl %dl,%esi
+ 8049c68:	8b 00                	mov    (%eax),%eax
+ 8049c6a:	f6 44 70 01 20       	testb  $0x20,0x1(%eax,%esi,2)
+ 8049c6f:	75 e1                	jne    8049c52 <blank_line+0x12>
+ 8049c71:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8049c76:	eb 05                	jmp    8049c7d <blank_line+0x3d>
+ 8049c78:	b8 01 00 00 00       	mov    $0x1,%eax
+ 8049c7d:	5b                   	pop    %ebx
+ 8049c7e:	5e                   	pop    %esi
+ 8049c7f:	5f                   	pop    %edi
+ 8049c80:	c3                   	ret    
+
+08049c81 <skip>:
+ 8049c81:	55                   	push   %ebp
+ 8049c82:	57                   	push   %edi
+ 8049c83:	56                   	push   %esi
+ 8049c84:	53                   	push   %ebx
+ 8049c85:	83 ec 0c             	sub    $0xc,%esp
+ 8049c88:	e8 e3 f5 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049c8d:	81 c3 73 43 00 00    	add    $0x4373,%ebx
+ 8049c93:	c7 c7 e4 e7 04 08    	mov    $0x804e7e4,%edi
+ 8049c99:	8d b3 60 08 00 00    	lea    0x860(%ebx),%esi
+ 8049c9f:	83 ec 04             	sub    $0x4,%esp
+ 8049ca2:	ff 37                	push   (%edi)
+ 8049ca4:	6a 50                	push   $0x50
+ 8049ca6:	8b 83 50 08 00 00    	mov    0x850(%ebx),%eax
+ 8049cac:	8d 04 80             	lea    (%eax,%eax,4),%eax
+ 8049caf:	c1 e0 04             	shl    $0x4,%eax
+ 8049cb2:	01 f0                	add    %esi,%eax
+ 8049cb4:	50                   	push   %eax
+ 8049cb5:	e8 c6 f3 ff ff       	call   8049080 <fgets@plt>
+ 8049cba:	89 c5                	mov    %eax,%ebp
+ 8049cbc:	83 c4 10             	add    $0x10,%esp
+ 8049cbf:	85 c0                	test   %eax,%eax
+ 8049cc1:	74 10                	je     8049cd3 <skip+0x52>
+ 8049cc3:	83 ec 0c             	sub    $0xc,%esp
+ 8049cc6:	50                   	push   %eax
+ 8049cc7:	e8 74 ff ff ff       	call   8049c40 <blank_line>
+ 8049ccc:	83 c4 10             	add    $0x10,%esp
+ 8049ccf:	85 c0                	test   %eax,%eax
+ 8049cd1:	75 cc                	jne    8049c9f <skip+0x1e>
+ 8049cd3:	89 e8                	mov    %ebp,%eax
+ 8049cd5:	83 c4 0c             	add    $0xc,%esp
+ 8049cd8:	5b                   	pop    %ebx
+ 8049cd9:	5e                   	pop    %esi
+ 8049cda:	5f                   	pop    %edi
+ 8049cdb:	5d                   	pop    %ebp
+ 8049cdc:	c3                   	ret    
+
+08049cdd <send_msg>:
+ 8049cdd:	56                   	push   %esi
+ 8049cde:	53                   	push   %ebx
+ 8049cdf:	8d 84 24 00 c0 ff ff 	lea    -0x4000(%esp),%eax
+ 8049ce6:	81 ec 00 10 00 00    	sub    $0x1000,%esp
+ 8049cec:	83 0c 24 00          	orl    $0x0,(%esp)
+ 8049cf0:	39 c4                	cmp    %eax,%esp
+ 8049cf2:	75 f2                	jne    8049ce6 <send_msg+0x9>
+ 8049cf4:	83 ec 04             	sub    $0x4,%esp
+ 8049cf7:	e8 74 f5 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049cfc:	81 c3 04 43 00 00    	add    $0x4304,%ebx
+ 8049d02:	8b 93 50 08 00 00    	mov    0x850(%ebx),%edx
+ 8049d08:	8d 44 92 fb          	lea    -0x5(%edx,%edx,4),%eax
+ 8049d0c:	c1 e0 04             	shl    $0x4,%eax
+ 8049d0f:	8d 8c 03 60 08 00 00 	lea    0x860(%ebx,%eax,1),%ecx
+ 8049d16:	83 bc 24 10 40 00 00 	cmpl   $0x0,0x4010(%esp)
+ 8049d1d:	00 
+ 8049d1e:	8d 83 d8 d2 ff ff    	lea    -0x2d28(%ebx),%eax
+ 8049d24:	8d b3 e0 d2 ff ff    	lea    -0x2d20(%ebx),%esi
+ 8049d2a:	0f 44 c6             	cmove  %esi,%eax
+ 8049d2d:	51                   	push   %ecx
+ 8049d2e:	52                   	push   %edx
+ 8049d2f:	50                   	push   %eax
+ 8049d30:	c7 c0 40 e5 04 08    	mov    $0x804e540,%eax
+ 8049d36:	ff 30                	push   (%eax)
+ 8049d38:	8d 83 e9 d2 ff ff    	lea    -0x2d17(%ebx),%eax
+ 8049d3e:	50                   	push   %eax
+ 8049d3f:	68 00 20 00 00       	push   $0x2000
+ 8049d44:	6a 01                	push   $0x1
+ 8049d46:	8d b4 24 1c 20 00 00 	lea    0x201c(%esp),%esi
+ 8049d4d:	56                   	push   %esi
+ 8049d4e:	e8 bd f4 ff ff       	call   8049210 <__sprintf_chk@plt>
+ 8049d53:	83 c4 20             	add    $0x20,%esp
+ 8049d56:	89 e0                	mov    %esp,%eax
+ 8049d58:	50                   	push   %eax
+ 8049d59:	6a 00                	push   $0x0
+ 8049d5b:	56                   	push   %esi
+ 8049d5c:	ff b3 fc ff ff ff    	push   -0x4(%ebx)
+ 8049d62:	e8 33 0d 00 00       	call   804aa9a <driver_post>
+ 8049d67:	83 c4 10             	add    $0x10,%esp
+ 8049d6a:	85 c0                	test   %eax,%eax
+ 8049d6c:	78 09                	js     8049d77 <send_msg+0x9a>
+ 8049d6e:	81 c4 04 40 00 00    	add    $0x4004,%esp
+ 8049d74:	5b                   	pop    %ebx
+ 8049d75:	5e                   	pop    %esi
+ 8049d76:	c3                   	ret    
+ 8049d77:	83 ec 0c             	sub    $0xc,%esp
+ 8049d7a:	8d 44 24 0c          	lea    0xc(%esp),%eax
+ 8049d7e:	50                   	push   %eax
+ 8049d7f:	e8 7c f3 ff ff       	call   8049100 <puts@plt>
+ 8049d84:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+ 8049d8b:	e8 90 f3 ff ff       	call   8049120 <exit@plt>
+
+08049d90 <explode_bomb>:
+ 8049d90:	53                   	push   %ebx
+ 8049d91:	83 ec 14             	sub    $0x14,%esp
+ 8049d94:	e8 d7 f4 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049d99:	81 c3 67 42 00 00    	add    $0x4267,%ebx
+ 8049d9f:	8d 83 f5 d2 ff ff    	lea    -0x2d0b(%ebx),%eax
+ 8049da5:	50                   	push   %eax
+ 8049da6:	e8 55 f3 ff ff       	call   8049100 <puts@plt>
+ 8049dab:	8d 83 fe d2 ff ff    	lea    -0x2d02(%ebx),%eax
+ 8049db1:	89 04 24             	mov    %eax,(%esp)
+ 8049db4:	e8 47 f3 ff ff       	call   8049100 <puts@plt>
+ 8049db9:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+ 8049dc0:	e8 18 ff ff ff       	call   8049cdd <send_msg>
+ 8049dc5:	8d 83 0c d2 ff ff    	lea    -0x2df4(%ebx),%eax
+ 8049dcb:	89 04 24             	mov    %eax,(%esp)
+ 8049dce:	e8 2d f3 ff ff       	call   8049100 <puts@plt>
+ 8049dd3:	c7 04 24 08 00 00 00 	movl   $0x8,(%esp)
+ 8049dda:	e8 41 f3 ff ff       	call   8049120 <exit@plt>
+
+08049ddf <read_six_numbers>:
+ 8049ddf:	53                   	push   %ebx
+ 8049de0:	83 ec 08             	sub    $0x8,%esp
+ 8049de3:	e8 88 f4 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049de8:	81 c3 18 42 00 00    	add    $0x4218,%ebx
+ 8049dee:	8b 44 24 14          	mov    0x14(%esp),%eax
+ 8049df2:	8d 50 14             	lea    0x14(%eax),%edx
+ 8049df5:	52                   	push   %edx
+ 8049df6:	8d 50 10             	lea    0x10(%eax),%edx
+ 8049df9:	52                   	push   %edx
+ 8049dfa:	8d 50 0c             	lea    0xc(%eax),%edx
+ 8049dfd:	52                   	push   %edx
+ 8049dfe:	8d 50 08             	lea    0x8(%eax),%edx
+ 8049e01:	52                   	push   %edx
+ 8049e02:	8d 50 04             	lea    0x4(%eax),%edx
+ 8049e05:	52                   	push   %edx
+ 8049e06:	50                   	push   %eax
+ 8049e07:	8d 83 15 d3 ff ff    	lea    -0x2ceb(%ebx),%eax
+ 8049e0d:	50                   	push   %eax
+ 8049e0e:	ff 74 24 2c          	push   0x2c(%esp)
+ 8049e12:	e8 49 f3 ff ff       	call   8049160 <__isoc99_sscanf@plt>
+ 8049e17:	83 c4 20             	add    $0x20,%esp
+ 8049e1a:	83 f8 05             	cmp    $0x5,%eax
+ 8049e1d:	7e 05                	jle    8049e24 <read_six_numbers+0x45>
+ 8049e1f:	83 c4 08             	add    $0x8,%esp
+ 8049e22:	5b                   	pop    %ebx
+ 8049e23:	c3                   	ret    
+ 8049e24:	e8 67 ff ff ff       	call   8049d90 <explode_bomb>
+
+08049e29 <read_line>:
+ 8049e29:	57                   	push   %edi
+ 8049e2a:	56                   	push   %esi
+ 8049e2b:	53                   	push   %ebx
+ 8049e2c:	e8 3f f4 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049e31:	81 c3 cf 41 00 00    	add    $0x41cf,%ebx
+ 8049e37:	e8 45 fe ff ff       	call   8049c81 <skip>
+ 8049e3c:	85 c0                	test   %eax,%eax
+ 8049e3e:	74 47                	je     8049e87 <read_line+0x5e>
+ 8049e40:	8b b3 50 08 00 00    	mov    0x850(%ebx),%esi
+ 8049e46:	8d 04 b6             	lea    (%esi,%esi,4),%eax
+ 8049e49:	c1 e0 04             	shl    $0x4,%eax
+ 8049e4c:	8d bc 03 60 08 00 00 	lea    0x860(%ebx,%eax,1),%edi
+ 8049e53:	83 ec 0c             	sub    $0xc,%esp
+ 8049e56:	57                   	push   %edi
+ 8049e57:	e8 d4 f2 ff ff       	call   8049130 <strlen@plt>
+ 8049e5c:	83 c4 10             	add    $0x10,%esp
+ 8049e5f:	83 f8 4e             	cmp    $0x4e,%eax
+ 8049e62:	0f 8f a4 00 00 00    	jg     8049f0c <read_line+0xe3>
+ 8049e68:	8d 14 b6             	lea    (%esi,%esi,4),%edx
+ 8049e6b:	c1 e2 04             	shl    $0x4,%edx
+ 8049e6e:	01 d0                	add    %edx,%eax
+ 8049e70:	c6 84 03 5f 08 00 00 	movb   $0x0,0x85f(%ebx,%eax,1)
+ 8049e77:	00 
+ 8049e78:	83 c6 01             	add    $0x1,%esi
+ 8049e7b:	89 b3 50 08 00 00    	mov    %esi,0x850(%ebx)
+ 8049e81:	89 f8                	mov    %edi,%eax
+ 8049e83:	5b                   	pop    %ebx
+ 8049e84:	5e                   	pop    %esi
+ 8049e85:	5f                   	pop    %edi
+ 8049e86:	c3                   	ret    
+ 8049e87:	c7 c2 e4 e7 04 08    	mov    $0x804e7e4,%edx
+ 8049e8d:	8b 83 f4 ff ff ff    	mov    -0xc(%ebx),%eax
+ 8049e93:	8b 00                	mov    (%eax),%eax
+ 8049e95:	39 02                	cmp    %eax,(%edx)
+ 8049e97:	74 20                	je     8049eb9 <read_line+0x90>
+ 8049e99:	83 ec 0c             	sub    $0xc,%esp
+ 8049e9c:	8d 83 45 d3 ff ff    	lea    -0x2cbb(%ebx),%eax
+ 8049ea2:	50                   	push   %eax
+ 8049ea3:	e8 38 f2 ff ff       	call   80490e0 <getenv@plt>
+ 8049ea8:	83 c4 10             	add    $0x10,%esp
+ 8049eab:	85 c0                	test   %eax,%eax
+ 8049ead:	74 25                	je     8049ed4 <read_line+0xab>
+ 8049eaf:	83 ec 0c             	sub    $0xc,%esp
+ 8049eb2:	6a 00                	push   $0x0
+ 8049eb4:	e8 67 f2 ff ff       	call   8049120 <exit@plt>
+ 8049eb9:	83 ec 0c             	sub    $0xc,%esp
+ 8049ebc:	8d 83 27 d3 ff ff    	lea    -0x2cd9(%ebx),%eax
+ 8049ec2:	50                   	push   %eax
+ 8049ec3:	e8 38 f2 ff ff       	call   8049100 <puts@plt>
+ 8049ec8:	c7 04 24 08 00 00 00 	movl   $0x8,(%esp)
+ 8049ecf:	e8 4c f2 ff ff       	call   8049120 <exit@plt>
+ 8049ed4:	8b 83 f4 ff ff ff    	mov    -0xc(%ebx),%eax
+ 8049eda:	8b 10                	mov    (%eax),%edx
+ 8049edc:	c7 c0 e4 e7 04 08    	mov    $0x804e7e4,%eax
+ 8049ee2:	89 10                	mov    %edx,(%eax)
+ 8049ee4:	e8 98 fd ff ff       	call   8049c81 <skip>
+ 8049ee9:	85 c0                	test   %eax,%eax
+ 8049eeb:	0f 85 4f ff ff ff    	jne    8049e40 <read_line+0x17>
+ 8049ef1:	83 ec 0c             	sub    $0xc,%esp
+ 8049ef4:	8d 83 27 d3 ff ff    	lea    -0x2cd9(%ebx),%eax
+ 8049efa:	50                   	push   %eax
+ 8049efb:	e8 00 f2 ff ff       	call   8049100 <puts@plt>
+ 8049f00:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+ 8049f07:	e8 14 f2 ff ff       	call   8049120 <exit@plt>
+ 8049f0c:	83 ec 0c             	sub    $0xc,%esp
+ 8049f0f:	8d 83 50 d3 ff ff    	lea    -0x2cb0(%ebx),%eax
+ 8049f15:	50                   	push   %eax
+ 8049f16:	e8 e5 f1 ff ff       	call   8049100 <puts@plt>
+ 8049f1b:	8b 83 50 08 00 00    	mov    0x850(%ebx),%eax
+ 8049f21:	8d 50 01             	lea    0x1(%eax),%edx
+ 8049f24:	89 93 50 08 00 00    	mov    %edx,0x850(%ebx)
+ 8049f2a:	6b c0 50             	imul   $0x50,%eax,%eax
+ 8049f2d:	8d 84 03 60 08 00 00 	lea    0x860(%ebx,%eax,1),%eax
+ 8049f34:	8d b3 6b d3 ff ff    	lea    -0x2c95(%ebx),%esi
+ 8049f3a:	b9 04 00 00 00       	mov    $0x4,%ecx
+ 8049f3f:	89 c7                	mov    %eax,%edi
+ 8049f41:	f3 a5                	rep movsl %ds:(%esi),%es:(%edi)
+ 8049f43:	e8 48 fe ff ff       	call   8049d90 <explode_bomb>
+
+08049f48 <phase_defused>:
+ 8049f48:	53                   	push   %ebx
+ 8049f49:	83 ec 14             	sub    $0x14,%esp
+ 8049f4c:	e8 1f f3 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049f51:	81 c3 af 40 00 00    	add    $0x40af,%ebx
+ 8049f57:	6a 01                	push   $0x1
+ 8049f59:	e8 7f fd ff ff       	call   8049cdd <send_msg>
+ 8049f5e:	83 c4 10             	add    $0x10,%esp
+ 8049f61:	83 bb 50 08 00 00 0b 	cmpl   $0xb,0x850(%ebx)
+ 8049f68:	74 05                	je     8049f6f <phase_defused+0x27>
+ 8049f6a:	83 c4 08             	add    $0x8,%esp
+ 8049f6d:	5b                   	pop    %ebx
+ 8049f6e:	c3                   	ret    
+ 8049f6f:	83 ec 0c             	sub    $0xc,%esp
+ 8049f72:	8d 83 30 d2 ff ff    	lea    -0x2dd0(%ebx),%eax
+ 8049f78:	50                   	push   %eax
+ 8049f79:	e8 82 f1 ff ff       	call   8049100 <puts@plt>
+ 8049f7e:	8d 83 5c d2 ff ff    	lea    -0x2da4(%ebx),%eax
+ 8049f84:	89 04 24             	mov    %eax,(%esp)
+ 8049f87:	e8 74 f1 ff ff       	call   8049100 <puts@plt>
+ 8049f8c:	83 c4 10             	add    $0x10,%esp
+ 8049f8f:	eb d9                	jmp    8049f6a <phase_defused+0x22>
+
+08049f91 <sigalrm_handler>:
+ 8049f91:	53                   	push   %ebx
+ 8049f92:	83 ec 08             	sub    $0x8,%esp
+ 8049f95:	e8 d6 f2 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049f9a:	81 c3 66 40 00 00    	add    $0x4066,%ebx
+ 8049fa0:	6a 00                	push   $0x0
+ 8049fa2:	8d 83 04 d7 ff ff    	lea    -0x28fc(%ebx),%eax
+ 8049fa8:	50                   	push   %eax
+ 8049fa9:	6a 01                	push   $0x1
+ 8049fab:	8b 83 ec ff ff ff    	mov    -0x14(%ebx),%eax
+ 8049fb1:	ff 30                	push   (%eax)
+ 8049fb3:	e8 f8 f1 ff ff       	call   80491b0 <__fprintf_chk@plt>
+ 8049fb8:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+ 8049fbf:	e8 5c f1 ff ff       	call   8049120 <exit@plt>
+
+08049fc4 <rio_readlineb>:
+ 8049fc4:	55                   	push   %ebp
+ 8049fc5:	57                   	push   %edi
+ 8049fc6:	56                   	push   %esi
+ 8049fc7:	53                   	push   %ebx
+ 8049fc8:	83 ec 1c             	sub    $0x1c,%esp
+ 8049fcb:	e8 a0 f2 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 8049fd0:	81 c3 30 40 00 00    	add    $0x4030,%ebx
+ 8049fd6:	89 d5                	mov    %edx,%ebp
+ 8049fd8:	83 f9 01             	cmp    $0x1,%ecx
+ 8049fdb:	0f 86 87 00 00 00    	jbe    804a068 <rio_readlineb+0xa4>
+ 8049fe1:	89 c6                	mov    %eax,%esi
+ 8049fe3:	8d 44 0a ff          	lea    -0x1(%edx,%ecx,1),%eax
+ 8049fe7:	89 44 24 0c          	mov    %eax,0xc(%esp)
+ 8049feb:	c7 44 24 08 01 00 00 	movl   $0x1,0x8(%esp)
+ 8049ff2:	00 
+ 8049ff3:	8d 7e 0c             	lea    0xc(%esi),%edi
+ 8049ff6:	eb 51                	jmp    804a049 <rio_readlineb+0x85>
+ 8049ff8:	e8 83 f1 ff ff       	call   8049180 <__errno_location@plt>
+ 8049ffd:	83 38 04             	cmpl   $0x4,(%eax)
+ 804a000:	75 50                	jne    804a052 <rio_readlineb+0x8e>
+ 804a002:	83 ec 04             	sub    $0x4,%esp
+ 804a005:	68 00 20 00 00       	push   $0x2000
+ 804a00a:	57                   	push   %edi
+ 804a00b:	ff 36                	push   (%esi)
+ 804a00d:	e8 4e f0 ff ff       	call   8049060 <read@plt>
+ 804a012:	89 46 04             	mov    %eax,0x4(%esi)
+ 804a015:	83 c4 10             	add    $0x10,%esp
+ 804a018:	85 c0                	test   %eax,%eax
+ 804a01a:	78 dc                	js     8049ff8 <rio_readlineb+0x34>
+ 804a01c:	74 39                	je     804a057 <rio_readlineb+0x93>
+ 804a01e:	89 7e 08             	mov    %edi,0x8(%esi)
+ 804a021:	8b 56 08             	mov    0x8(%esi),%edx
+ 804a024:	0f b6 0a             	movzbl (%edx),%ecx
+ 804a027:	83 c2 01             	add    $0x1,%edx
+ 804a02a:	89 56 08             	mov    %edx,0x8(%esi)
+ 804a02d:	83 e8 01             	sub    $0x1,%eax
+ 804a030:	89 46 04             	mov    %eax,0x4(%esi)
+ 804a033:	83 c5 01             	add    $0x1,%ebp
+ 804a036:	88 4d ff             	mov    %cl,-0x1(%ebp)
+ 804a039:	80 f9 0a             	cmp    $0xa,%cl
+ 804a03c:	74 38                	je     804a076 <rio_readlineb+0xb2>
+ 804a03e:	83 44 24 08 01       	addl   $0x1,0x8(%esp)
+ 804a043:	3b 6c 24 0c          	cmp    0xc(%esp),%ebp
+ 804a047:	74 29                	je     804a072 <rio_readlineb+0xae>
+ 804a049:	8b 46 04             	mov    0x4(%esi),%eax
+ 804a04c:	85 c0                	test   %eax,%eax
+ 804a04e:	7e b2                	jle    804a002 <rio_readlineb+0x3e>
+ 804a050:	eb cf                	jmp    804a021 <rio_readlineb+0x5d>
+ 804a052:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a057:	85 c0                	test   %eax,%eax
+ 804a059:	75 2b                	jne    804a086 <rio_readlineb+0xc2>
+ 804a05b:	83 7c 24 08 01       	cmpl   $0x1,0x8(%esp)
+ 804a060:	75 14                	jne    804a076 <rio_readlineb+0xb2>
+ 804a062:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804a066:	eb 12                	jmp    804a07a <rio_readlineb+0xb6>
+ 804a068:	c7 44 24 08 01 00 00 	movl   $0x1,0x8(%esp)
+ 804a06f:	00 
+ 804a070:	eb 04                	jmp    804a076 <rio_readlineb+0xb2>
+ 804a072:	8b 6c 24 0c          	mov    0xc(%esp),%ebp
+ 804a076:	c6 45 00 00          	movb   $0x0,0x0(%ebp)
+ 804a07a:	8b 44 24 08          	mov    0x8(%esp),%eax
+ 804a07e:	83 c4 1c             	add    $0x1c,%esp
+ 804a081:	5b                   	pop    %ebx
+ 804a082:	5e                   	pop    %esi
+ 804a083:	5f                   	pop    %edi
+ 804a084:	5d                   	pop    %ebp
+ 804a085:	c3                   	ret    
+ 804a086:	c7 44 24 08 ff ff ff 	movl   $0xffffffff,0x8(%esp)
+ 804a08d:	ff 
+ 804a08e:	eb ea                	jmp    804a07a <rio_readlineb+0xb6>
+
+0804a090 <submitr>:
+ 804a090:	55                   	push   %ebp
+ 804a091:	57                   	push   %edi
+ 804a092:	56                   	push   %esi
+ 804a093:	53                   	push   %ebx
+ 804a094:	8d 84 24 00 60 ff ff 	lea    -0xa000(%esp),%eax
+ 804a09b:	81 ec 00 10 00 00    	sub    $0x1000,%esp
+ 804a0a1:	83 0c 24 00          	orl    $0x0,(%esp)
+ 804a0a5:	39 c4                	cmp    %eax,%esp
+ 804a0a7:	75 f2                	jne    804a09b <submitr+0xb>
+ 804a0a9:	83 ec 50             	sub    $0x50,%esp
+ 804a0ac:	e8 bf f1 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 804a0b1:	81 c3 4f 3f 00 00    	add    $0x3f4f,%ebx
+ 804a0b7:	c7 84 24 24 20 00 00 	movl   $0x0,0x2024(%esp)
+ 804a0be:	00 00 00 00 
+ 804a0c2:	6a 00                	push   $0x0
+ 804a0c4:	6a 01                	push   $0x1
+ 804a0c6:	6a 02                	push   $0x2
+ 804a0c8:	e8 d3 f0 ff ff       	call   80491a0 <socket@plt>
+ 804a0cd:	83 c4 10             	add    $0x10,%esp
+ 804a0d0:	85 c0                	test   %eax,%eax
+ 804a0d2:	0f 88 5b 01 00 00    	js     804a233 <submitr+0x1a3>
+ 804a0d8:	89 c5                	mov    %eax,%ebp
+ 804a0da:	83 ec 0c             	sub    $0xc,%esp
+ 804a0dd:	ff b4 24 6c a0 00 00 	push   0xa06c(%esp)
+ 804a0e4:	e8 d7 f0 ff ff       	call   80491c0 <gethostbyname@plt>
+ 804a0e9:	83 c4 10             	add    $0x10,%esp
+ 804a0ec:	85 c0                	test   %eax,%eax
+ 804a0ee:	0f 84 94 01 00 00    	je     804a288 <submitr+0x1f8>
+ 804a0f4:	8d b4 24 30 a0 00 00 	lea    0xa030(%esp),%esi
+ 804a0fb:	c7 84 24 30 a0 00 00 	movl   $0x0,0xa030(%esp)
+ 804a102:	00 00 00 00 
+ 804a106:	c7 84 24 34 a0 00 00 	movl   $0x0,0xa034(%esp)
+ 804a10d:	00 00 00 00 
+ 804a111:	c7 84 24 38 a0 00 00 	movl   $0x0,0xa038(%esp)
+ 804a118:	00 00 00 00 
+ 804a11c:	c7 84 24 3c a0 00 00 	movl   $0x0,0xa03c(%esp)
+ 804a123:	00 00 00 00 
+ 804a127:	66 c7 84 24 30 a0 00 	movw   $0x2,0xa030(%esp)
+ 804a12e:	00 02 00 
+ 804a131:	6a 0c                	push   $0xc
+ 804a133:	ff 70 0c             	push   0xc(%eax)
+ 804a136:	8b 40 10             	mov    0x10(%eax),%eax
+ 804a139:	ff 30                	push   (%eax)
+ 804a13b:	8d 84 24 40 a0 00 00 	lea    0xa040(%esp),%eax
+ 804a142:	50                   	push   %eax
+ 804a143:	e8 c8 ef ff ff       	call   8049110 <__memmove_chk@plt>
+ 804a148:	0f b7 84 24 74 a0 00 	movzwl 0xa074(%esp),%eax
+ 804a14f:	00 
+ 804a150:	66 c1 c0 08          	rol    $0x8,%ax
+ 804a154:	66 89 84 24 42 a0 00 	mov    %ax,0xa042(%esp)
+ 804a15b:	00 
+ 804a15c:	83 c4 0c             	add    $0xc,%esp
+ 804a15f:	6a 10                	push   $0x10
+ 804a161:	56                   	push   %esi
+ 804a162:	55                   	push   %ebp
+ 804a163:	e8 78 f0 ff ff       	call   80491e0 <connect@plt>
+ 804a168:	83 c4 10             	add    $0x10,%esp
+ 804a16b:	85 c0                	test   %eax,%eax
+ 804a16d:	0f 88 88 01 00 00    	js     804a2fb <submitr+0x26b>
+ 804a173:	83 ec 0c             	sub    $0xc,%esp
+ 804a176:	ff b4 24 80 a0 00 00 	push   0xa080(%esp)
+ 804a17d:	e8 ae ef ff ff       	call   8049130 <strlen@plt>
+ 804a182:	83 c4 04             	add    $0x4,%esp
+ 804a185:	89 c6                	mov    %eax,%esi
+ 804a187:	ff b4 24 74 a0 00 00 	push   0xa074(%esp)
+ 804a18e:	e8 9d ef ff ff       	call   8049130 <strlen@plt>
+ 804a193:	83 c4 04             	add    $0x4,%esp
+ 804a196:	89 44 24 10          	mov    %eax,0x10(%esp)
+ 804a19a:	ff b4 24 78 a0 00 00 	push   0xa078(%esp)
+ 804a1a1:	e8 8a ef ff ff       	call   8049130 <strlen@plt>
+ 804a1a6:	83 c4 04             	add    $0x4,%esp
+ 804a1a9:	89 c7                	mov    %eax,%edi
+ 804a1ab:	ff b4 24 7c a0 00 00 	push   0xa07c(%esp)
+ 804a1b2:	e8 79 ef ff ff       	call   8049130 <strlen@plt>
+ 804a1b7:	83 c4 10             	add    $0x10,%esp
+ 804a1ba:	89 c2                	mov    %eax,%edx
+ 804a1bc:	8b 44 24 04          	mov    0x4(%esp),%eax
+ 804a1c0:	8d 84 38 80 00 00 00 	lea    0x80(%eax,%edi,1),%eax
+ 804a1c7:	01 d0                	add    %edx,%eax
+ 804a1c9:	8d 14 76             	lea    (%esi,%esi,2),%edx
+ 804a1cc:	01 d0                	add    %edx,%eax
+ 804a1ce:	3d 00 20 00 00       	cmp    $0x2000,%eax
+ 804a1d3:	0f 87 87 01 00 00    	ja     804a360 <submitr+0x2d0>
+ 804a1d9:	8d 94 24 24 40 00 00 	lea    0x4024(%esp),%edx
+ 804a1e0:	b9 00 08 00 00       	mov    $0x800,%ecx
+ 804a1e5:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804a1ea:	89 d7                	mov    %edx,%edi
+ 804a1ec:	f3 ab                	rep stos %eax,%es:(%edi)
+ 804a1ee:	83 ec 0c             	sub    $0xc,%esp
+ 804a1f1:	ff b4 24 80 a0 00 00 	push   0xa080(%esp)
+ 804a1f8:	e8 33 ef ff ff       	call   8049130 <strlen@plt>
+ 804a1fd:	83 c4 10             	add    $0x10,%esp
+ 804a200:	85 c0                	test   %eax,%eax
+ 804a202:	0f 84 77 02 00 00    	je     804a47f <submitr+0x3ef>
+ 804a208:	8b b4 24 74 a0 00 00 	mov    0xa074(%esp),%esi
+ 804a20f:	8d bc 24 24 40 00 00 	lea    0x4024(%esp),%edi
+ 804a216:	8d 8b 0e d8 ff ff    	lea    -0x27f2(%ebx),%ecx
+ 804a21c:	89 4c 24 08          	mov    %ecx,0x8(%esp)
+ 804a220:	8d 4c 24 18          	lea    0x18(%esp),%ecx
+ 804a224:	89 4c 24 0c          	mov    %ecx,0xc(%esp)
+ 804a228:	89 6c 24 04          	mov    %ebp,0x4(%esp)
+ 804a22c:	89 c5                	mov    %eax,%ebp
+ 804a22e:	e9 c8 01 00 00       	jmp    804a3fb <submitr+0x36b>
+ 804a233:	8b 84 24 78 a0 00 00 	mov    0xa078(%esp),%eax
+ 804a23a:	c7 00 45 72 72 6f    	movl   $0x6f727245,(%eax)
+ 804a240:	c7 40 04 72 3a 20 43 	movl   $0x43203a72,0x4(%eax)
+ 804a247:	c7 40 08 6c 69 65 6e 	movl   $0x6e65696c,0x8(%eax)
+ 804a24e:	c7 40 0c 74 20 75 6e 	movl   $0x6e752074,0xc(%eax)
+ 804a255:	c7 40 10 61 62 6c 65 	movl   $0x656c6261,0x10(%eax)
+ 804a25c:	c7 40 14 20 74 6f 20 	movl   $0x206f7420,0x14(%eax)
+ 804a263:	c7 40 18 63 72 65 61 	movl   $0x61657263,0x18(%eax)
+ 804a26a:	c7 40 1c 74 65 20 73 	movl   $0x73206574,0x1c(%eax)
+ 804a271:	c7 40 20 6f 63 6b 65 	movl   $0x656b636f,0x20(%eax)
+ 804a278:	66 c7 40 24 74 00    	movw   $0x74,0x24(%eax)
+ 804a27e:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a283:	e9 b3 04 00 00       	jmp    804a73b <submitr+0x6ab>
+ 804a288:	8b 84 24 78 a0 00 00 	mov    0xa078(%esp),%eax
+ 804a28f:	c7 00 45 72 72 6f    	movl   $0x6f727245,(%eax)
+ 804a295:	c7 40 04 72 3a 20 44 	movl   $0x44203a72,0x4(%eax)
+ 804a29c:	c7 40 08 4e 53 20 69 	movl   $0x6920534e,0x8(%eax)
+ 804a2a3:	c7 40 0c 73 20 75 6e 	movl   $0x6e752073,0xc(%eax)
+ 804a2aa:	c7 40 10 61 62 6c 65 	movl   $0x656c6261,0x10(%eax)
+ 804a2b1:	c7 40 14 20 74 6f 20 	movl   $0x206f7420,0x14(%eax)
+ 804a2b8:	c7 40 18 72 65 73 6f 	movl   $0x6f736572,0x18(%eax)
+ 804a2bf:	c7 40 1c 6c 76 65 20 	movl   $0x2065766c,0x1c(%eax)
+ 804a2c6:	c7 40 20 73 65 72 76 	movl   $0x76726573,0x20(%eax)
+ 804a2cd:	c7 40 24 65 72 20 61 	movl   $0x61207265,0x24(%eax)
+ 804a2d4:	c7 40 28 64 64 72 65 	movl   $0x65726464,0x28(%eax)
+ 804a2db:	66 c7 40 2c 73 73    	movw   $0x7373,0x2c(%eax)
+ 804a2e1:	c6 40 2e 00          	movb   $0x0,0x2e(%eax)
+ 804a2e5:	83 ec 0c             	sub    $0xc,%esp
+ 804a2e8:	55                   	push   %ebp
+ 804a2e9:	e8 02 ef ff ff       	call   80491f0 <close@plt>
+ 804a2ee:	83 c4 10             	add    $0x10,%esp
+ 804a2f1:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a2f6:	e9 40 04 00 00       	jmp    804a73b <submitr+0x6ab>
+ 804a2fb:	8b 84 24 78 a0 00 00 	mov    0xa078(%esp),%eax
+ 804a302:	c7 00 45 72 72 6f    	movl   $0x6f727245,(%eax)
+ 804a308:	c7 40 04 72 3a 20 55 	movl   $0x55203a72,0x4(%eax)
+ 804a30f:	c7 40 08 6e 61 62 6c 	movl   $0x6c62616e,0x8(%eax)
+ 804a316:	c7 40 0c 65 20 74 6f 	movl   $0x6f742065,0xc(%eax)
+ 804a31d:	c7 40 10 20 63 6f 6e 	movl   $0x6e6f6320,0x10(%eax)
+ 804a324:	c7 40 14 6e 65 63 74 	movl   $0x7463656e,0x14(%eax)
+ 804a32b:	c7 40 18 20 74 6f 20 	movl   $0x206f7420,0x18(%eax)
+ 804a332:	c7 40 1c 74 68 65 20 	movl   $0x20656874,0x1c(%eax)
+ 804a339:	c7 40 20 73 65 72 76 	movl   $0x76726573,0x20(%eax)
+ 804a340:	66 c7 40 24 65 72    	movw   $0x7265,0x24(%eax)
+ 804a346:	c6 40 26 00          	movb   $0x0,0x26(%eax)
+ 804a34a:	83 ec 0c             	sub    $0xc,%esp
+ 804a34d:	55                   	push   %ebp
+ 804a34e:	e8 9d ee ff ff       	call   80491f0 <close@plt>
+ 804a353:	83 c4 10             	add    $0x10,%esp
+ 804a356:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a35b:	e9 db 03 00 00       	jmp    804a73b <submitr+0x6ab>
+ 804a360:	8b 84 24 78 a0 00 00 	mov    0xa078(%esp),%eax
+ 804a367:	c7 00 45 72 72 6f    	movl   $0x6f727245,(%eax)
+ 804a36d:	c7 40 04 72 3a 20 52 	movl   $0x52203a72,0x4(%eax)
+ 804a374:	c7 40 08 65 73 75 6c 	movl   $0x6c757365,0x8(%eax)
+ 804a37b:	c7 40 0c 74 20 73 74 	movl   $0x74732074,0xc(%eax)
+ 804a382:	c7 40 10 72 69 6e 67 	movl   $0x676e6972,0x10(%eax)
+ 804a389:	c7 40 14 20 74 6f 6f 	movl   $0x6f6f7420,0x14(%eax)
+ 804a390:	c7 40 18 20 6c 61 72 	movl   $0x72616c20,0x18(%eax)
+ 804a397:	c7 40 1c 67 65 2e 20 	movl   $0x202e6567,0x1c(%eax)
+ 804a39e:	c7 40 20 49 6e 63 72 	movl   $0x72636e49,0x20(%eax)
+ 804a3a5:	c7 40 24 65 61 73 65 	movl   $0x65736165,0x24(%eax)
+ 804a3ac:	c7 40 28 20 53 55 42 	movl   $0x42555320,0x28(%eax)
+ 804a3b3:	c7 40 2c 4d 49 54 52 	movl   $0x5254494d,0x2c(%eax)
+ 804a3ba:	c7 40 30 5f 4d 41 58 	movl   $0x58414d5f,0x30(%eax)
+ 804a3c1:	c7 40 34 42 55 46 00 	movl   $0x465542,0x34(%eax)
+ 804a3c8:	83 ec 0c             	sub    $0xc,%esp
+ 804a3cb:	55                   	push   %ebp
+ 804a3cc:	e8 1f ee ff ff       	call   80491f0 <close@plt>
+ 804a3d1:	83 c4 10             	add    $0x10,%esp
+ 804a3d4:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a3d9:	e9 5d 03 00 00       	jmp    804a73b <submitr+0x6ab>
+ 804a3de:	3c 5f                	cmp    $0x5f,%al
+ 804a3e0:	75 79                	jne    804a45b <submitr+0x3cb>
+ 804a3e2:	88 07                	mov    %al,(%edi)
+ 804a3e4:	8d 7f 01             	lea    0x1(%edi),%edi
+ 804a3e7:	83 c6 01             	add    $0x1,%esi
+ 804a3ea:	89 e8                	mov    %ebp,%eax
+ 804a3ec:	03 84 24 74 a0 00 00 	add    0xa074(%esp),%eax
+ 804a3f3:	39 c6                	cmp    %eax,%esi
+ 804a3f5:	0f 84 80 00 00 00    	je     804a47b <submitr+0x3eb>
+ 804a3fb:	0f b6 06             	movzbl (%esi),%eax
+ 804a3fe:	8d 50 d6             	lea    -0x2a(%eax),%edx
+ 804a401:	80 fa 0f             	cmp    $0xf,%dl
+ 804a404:	77 d8                	ja     804a3de <submitr+0x34e>
+ 804a406:	b9 d9 ff 00 00       	mov    $0xffd9,%ecx
+ 804a40b:	0f a3 d1             	bt     %edx,%ecx
+ 804a40e:	72 d2                	jb     804a3e2 <submitr+0x352>
+ 804a410:	3c 5f                	cmp    $0x5f,%al
+ 804a412:	74 ce                	je     804a3e2 <submitr+0x352>
+ 804a414:	8d 50 e0             	lea    -0x20(%eax),%edx
+ 804a417:	80 fa 5f             	cmp    $0x5f,%dl
+ 804a41a:	76 08                	jbe    804a424 <submitr+0x394>
+ 804a41c:	3c 09                	cmp    $0x9,%al
+ 804a41e:	0f 85 09 04 00 00    	jne    804a82d <submitr+0x79d>
+ 804a424:	83 ec 0c             	sub    $0xc,%esp
+ 804a427:	0f b6 c0             	movzbl %al,%eax
+ 804a42a:	50                   	push   %eax
+ 804a42b:	ff 74 24 18          	push   0x18(%esp)
+ 804a42f:	6a 08                	push   $0x8
+ 804a431:	6a 01                	push   $0x1
+ 804a433:	ff 74 24 28          	push   0x28(%esp)
+ 804a437:	e8 d4 ed ff ff       	call   8049210 <__sprintf_chk@plt>
+ 804a43c:	0f b6 44 24 38       	movzbl 0x38(%esp),%eax
+ 804a441:	88 07                	mov    %al,(%edi)
+ 804a443:	0f b6 44 24 39       	movzbl 0x39(%esp),%eax
+ 804a448:	88 47 01             	mov    %al,0x1(%edi)
+ 804a44b:	0f b6 44 24 3a       	movzbl 0x3a(%esp),%eax
+ 804a450:	88 47 02             	mov    %al,0x2(%edi)
+ 804a453:	83 c4 20             	add    $0x20,%esp
+ 804a456:	8d 7f 03             	lea    0x3(%edi),%edi
+ 804a459:	eb 8c                	jmp    804a3e7 <submitr+0x357>
+ 804a45b:	89 c2                	mov    %eax,%edx
+ 804a45d:	83 e2 df             	and    $0xffffffdf,%edx
+ 804a460:	83 ea 41             	sub    $0x41,%edx
+ 804a463:	80 fa 19             	cmp    $0x19,%dl
+ 804a466:	0f 86 76 ff ff ff    	jbe    804a3e2 <submitr+0x352>
+ 804a46c:	3c 20                	cmp    $0x20,%al
+ 804a46e:	75 a4                	jne    804a414 <submitr+0x384>
+ 804a470:	c6 07 2b             	movb   $0x2b,(%edi)
+ 804a473:	8d 7f 01             	lea    0x1(%edi),%edi
+ 804a476:	e9 6c ff ff ff       	jmp    804a3e7 <submitr+0x357>
+ 804a47b:	8b 6c 24 04          	mov    0x4(%esp),%ebp
+ 804a47f:	8d 84 24 24 40 00 00 	lea    0x4024(%esp),%eax
+ 804a486:	50                   	push   %eax
+ 804a487:	ff b4 24 74 a0 00 00 	push   0xa074(%esp)
+ 804a48e:	ff b4 24 74 a0 00 00 	push   0xa074(%esp)
+ 804a495:	ff b4 24 74 a0 00 00 	push   0xa074(%esp)
+ 804a49c:	8d 83 9c d7 ff ff    	lea    -0x2864(%ebx),%eax
+ 804a4a2:	50                   	push   %eax
+ 804a4a3:	68 00 20 00 00       	push   $0x2000
+ 804a4a8:	6a 01                	push   $0x1
+ 804a4aa:	8d b4 24 40 60 00 00 	lea    0x6040(%esp),%esi
+ 804a4b1:	56                   	push   %esi
+ 804a4b2:	e8 59 ed ff ff       	call   8049210 <__sprintf_chk@plt>
+ 804a4b7:	83 c4 14             	add    $0x14,%esp
+ 804a4ba:	56                   	push   %esi
+ 804a4bb:	e8 70 ec ff ff       	call   8049130 <strlen@plt>
+ 804a4c0:	83 c4 10             	add    $0x10,%esp
+ 804a4c3:	89 c6                	mov    %eax,%esi
+ 804a4c5:	8d bc 24 24 60 00 00 	lea    0x6024(%esp),%edi
+ 804a4cc:	85 c0                	test   %eax,%eax
+ 804a4ce:	0f 85 38 01 00 00    	jne    804a60c <submitr+0x57c>
+ 804a4d4:	89 ac 24 24 80 00 00 	mov    %ebp,0x8024(%esp)
+ 804a4db:	c7 84 24 28 80 00 00 	movl   $0x0,0x8028(%esp)
+ 804a4e2:	00 00 00 00 
+ 804a4e6:	8d 84 24 24 80 00 00 	lea    0x8024(%esp),%eax
+ 804a4ed:	8d 94 24 30 80 00 00 	lea    0x8030(%esp),%edx
+ 804a4f4:	89 94 24 2c 80 00 00 	mov    %edx,0x802c(%esp)
+ 804a4fb:	8d 94 24 24 60 00 00 	lea    0x6024(%esp),%edx
+ 804a502:	b9 00 20 00 00       	mov    $0x2000,%ecx
+ 804a507:	e8 b8 fa ff ff       	call   8049fc4 <rio_readlineb>
+ 804a50c:	85 c0                	test   %eax,%eax
+ 804a50e:	0f 8e 1f 01 00 00    	jle    804a633 <submitr+0x5a3>
+ 804a514:	83 ec 0c             	sub    $0xc,%esp
+ 804a517:	8d 44 24 2c          	lea    0x2c(%esp),%eax
+ 804a51b:	50                   	push   %eax
+ 804a51c:	8d 84 24 30 20 00 00 	lea    0x2030(%esp),%eax
+ 804a523:	50                   	push   %eax
+ 804a524:	8d 84 24 38 20 00 00 	lea    0x2038(%esp),%eax
+ 804a52b:	50                   	push   %eax
+ 804a52c:	8d 83 15 d8 ff ff    	lea    -0x27eb(%ebx),%eax
+ 804a532:	50                   	push   %eax
+ 804a533:	8d 84 24 40 60 00 00 	lea    0x6040(%esp),%eax
+ 804a53a:	50                   	push   %eax
+ 804a53b:	e8 20 ec ff ff       	call   8049160 <__isoc99_sscanf@plt>
+ 804a540:	8b 84 24 40 20 00 00 	mov    0x2040(%esp),%eax
+ 804a547:	83 c4 20             	add    $0x20,%esp
+ 804a54a:	3d c8 00 00 00       	cmp    $0xc8,%eax
+ 804a54f:	0f 85 5b 01 00 00    	jne    804a6b0 <submitr+0x620>
+ 804a555:	8d bb 26 d8 ff ff    	lea    -0x27da(%ebx),%edi
+ 804a55b:	8d b4 24 24 60 00 00 	lea    0x6024(%esp),%esi
+ 804a562:	83 ec 08             	sub    $0x8,%esp
+ 804a565:	57                   	push   %edi
+ 804a566:	56                   	push   %esi
+ 804a567:	e8 d4 ea ff ff       	call   8049040 <strcmp@plt>
+ 804a56c:	83 c4 10             	add    $0x10,%esp
+ 804a56f:	85 c0                	test   %eax,%eax
+ 804a571:	0f 84 6c 01 00 00    	je     804a6e3 <submitr+0x653>
+ 804a577:	8d 84 24 24 80 00 00 	lea    0x8024(%esp),%eax
+ 804a57e:	b9 00 20 00 00       	mov    $0x2000,%ecx
+ 804a583:	89 f2                	mov    %esi,%edx
+ 804a585:	e8 3a fa ff ff       	call   8049fc4 <rio_readlineb>
+ 804a58a:	85 c0                	test   %eax,%eax
+ 804a58c:	7f d4                	jg     804a562 <submitr+0x4d2>
+ 804a58e:	8b 84 24 78 a0 00 00 	mov    0xa078(%esp),%eax
+ 804a595:	c7 00 45 72 72 6f    	movl   $0x6f727245,(%eax)
+ 804a59b:	c7 40 04 72 3a 20 43 	movl   $0x43203a72,0x4(%eax)
+ 804a5a2:	c7 40 08 6c 69 65 6e 	movl   $0x6e65696c,0x8(%eax)
+ 804a5a9:	c7 40 0c 74 20 75 6e 	movl   $0x6e752074,0xc(%eax)
+ 804a5b0:	c7 40 10 61 62 6c 65 	movl   $0x656c6261,0x10(%eax)
+ 804a5b7:	c7 40 14 20 74 6f 20 	movl   $0x206f7420,0x14(%eax)
+ 804a5be:	c7 40 18 72 65 61 64 	movl   $0x64616572,0x18(%eax)
+ 804a5c5:	c7 40 1c 20 68 65 61 	movl   $0x61656820,0x1c(%eax)
+ 804a5cc:	c7 40 20 64 65 72 73 	movl   $0x73726564,0x20(%eax)
+ 804a5d3:	c7 40 24 20 66 72 6f 	movl   $0x6f726620,0x24(%eax)
+ 804a5da:	c7 40 28 6d 20 73 65 	movl   $0x6573206d,0x28(%eax)
+ 804a5e1:	c7 40 2c 72 76 65 72 	movl   $0x72657672,0x2c(%eax)
+ 804a5e8:	c6 40 30 00          	movb   $0x0,0x30(%eax)
+ 804a5ec:	83 ec 0c             	sub    $0xc,%esp
+ 804a5ef:	55                   	push   %ebp
+ 804a5f0:	e8 fb eb ff ff       	call   80491f0 <close@plt>
+ 804a5f5:	83 c4 10             	add    $0x10,%esp
+ 804a5f8:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a5fd:	e9 39 01 00 00       	jmp    804a73b <submitr+0x6ab>
+ 804a602:	01 c7                	add    %eax,%edi
+ 804a604:	29 c6                	sub    %eax,%esi
+ 804a606:	0f 84 c8 fe ff ff    	je     804a4d4 <submitr+0x444>
+ 804a60c:	83 ec 04             	sub    $0x4,%esp
+ 804a60f:	56                   	push   %esi
+ 804a610:	57                   	push   %edi
+ 804a611:	55                   	push   %ebp
+ 804a612:	e8 29 eb ff ff       	call   8049140 <write@plt>
+ 804a617:	83 c4 10             	add    $0x10,%esp
+ 804a61a:	85 c0                	test   %eax,%eax
+ 804a61c:	7f e4                	jg     804a602 <submitr+0x572>
+ 804a61e:	e8 5d eb ff ff       	call   8049180 <__errno_location@plt>
+ 804a623:	83 38 04             	cmpl   $0x4,(%eax)
+ 804a626:	0f 85 98 01 00 00    	jne    804a7c4 <submitr+0x734>
+ 804a62c:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804a631:	eb cf                	jmp    804a602 <submitr+0x572>
+ 804a633:	8b 84 24 78 a0 00 00 	mov    0xa078(%esp),%eax
+ 804a63a:	c7 00 45 72 72 6f    	movl   $0x6f727245,(%eax)
+ 804a640:	c7 40 04 72 3a 20 43 	movl   $0x43203a72,0x4(%eax)
+ 804a647:	c7 40 08 6c 69 65 6e 	movl   $0x6e65696c,0x8(%eax)
+ 804a64e:	c7 40 0c 74 20 75 6e 	movl   $0x6e752074,0xc(%eax)
+ 804a655:	c7 40 10 61 62 6c 65 	movl   $0x656c6261,0x10(%eax)
+ 804a65c:	c7 40 14 20 74 6f 20 	movl   $0x206f7420,0x14(%eax)
+ 804a663:	c7 40 18 72 65 61 64 	movl   $0x64616572,0x18(%eax)
+ 804a66a:	c7 40 1c 20 66 69 72 	movl   $0x72696620,0x1c(%eax)
+ 804a671:	c7 40 20 73 74 20 68 	movl   $0x68207473,0x20(%eax)
+ 804a678:	c7 40 24 65 61 64 65 	movl   $0x65646165,0x24(%eax)
+ 804a67f:	c7 40 28 72 20 66 72 	movl   $0x72662072,0x28(%eax)
+ 804a686:	c7 40 2c 6f 6d 20 73 	movl   $0x73206d6f,0x2c(%eax)
+ 804a68d:	c7 40 30 65 72 76 65 	movl   $0x65767265,0x30(%eax)
+ 804a694:	66 c7 40 34 72 00    	movw   $0x72,0x34(%eax)
+ 804a69a:	83 ec 0c             	sub    $0xc,%esp
+ 804a69d:	55                   	push   %ebp
+ 804a69e:	e8 4d eb ff ff       	call   80491f0 <close@plt>
+ 804a6a3:	83 c4 10             	add    $0x10,%esp
+ 804a6a6:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a6ab:	e9 8b 00 00 00       	jmp    804a73b <submitr+0x6ab>
+ 804a6b0:	83 ec 08             	sub    $0x8,%esp
+ 804a6b3:	8d 54 24 28          	lea    0x28(%esp),%edx
+ 804a6b7:	52                   	push   %edx
+ 804a6b8:	50                   	push   %eax
+ 804a6b9:	8d 83 28 d7 ff ff    	lea    -0x28d8(%ebx),%eax
+ 804a6bf:	50                   	push   %eax
+ 804a6c0:	6a ff                	push   $0xffffffff
+ 804a6c2:	6a 01                	push   $0x1
+ 804a6c4:	ff b4 24 94 a0 00 00 	push   0xa094(%esp)
+ 804a6cb:	e8 40 eb ff ff       	call   8049210 <__sprintf_chk@plt>
+ 804a6d0:	83 c4 14             	add    $0x14,%esp
+ 804a6d3:	55                   	push   %ebp
+ 804a6d4:	e8 17 eb ff ff       	call   80491f0 <close@plt>
+ 804a6d9:	83 c4 10             	add    $0x10,%esp
+ 804a6dc:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a6e1:	eb 58                	jmp    804a73b <submitr+0x6ab>
+ 804a6e3:	8d 94 24 24 60 00 00 	lea    0x6024(%esp),%edx
+ 804a6ea:	8d 84 24 24 80 00 00 	lea    0x8024(%esp),%eax
+ 804a6f1:	b9 00 20 00 00       	mov    $0x2000,%ecx
+ 804a6f6:	e8 c9 f8 ff ff       	call   8049fc4 <rio_readlineb>
+ 804a6fb:	85 c0                	test   %eax,%eax
+ 804a6fd:	7e 47                	jle    804a746 <submitr+0x6b6>
+ 804a6ff:	83 ec 08             	sub    $0x8,%esp
+ 804a702:	8d 84 24 2c 60 00 00 	lea    0x602c(%esp),%eax
+ 804a709:	50                   	push   %eax
+ 804a70a:	ff b4 24 84 a0 00 00 	push   0xa084(%esp)
+ 804a711:	e8 aa e9 ff ff       	call   80490c0 <strcpy@plt>
+ 804a716:	89 2c 24             	mov    %ebp,(%esp)
+ 804a719:	e8 d2 ea ff ff       	call   80491f0 <close@plt>
+ 804a71e:	83 c4 08             	add    $0x8,%esp
+ 804a721:	8d 83 29 d8 ff ff    	lea    -0x27d7(%ebx),%eax
+ 804a727:	50                   	push   %eax
+ 804a728:	ff b4 24 84 a0 00 00 	push   0xa084(%esp)
+ 804a72f:	e8 0c e9 ff ff       	call   8049040 <strcmp@plt>
+ 804a734:	83 c4 10             	add    $0x10,%esp
+ 804a737:	f7 d8                	neg    %eax
+ 804a739:	19 c0                	sbb    %eax,%eax
+ 804a73b:	81 c4 4c a0 00 00    	add    $0xa04c,%esp
+ 804a741:	5b                   	pop    %ebx
+ 804a742:	5e                   	pop    %esi
+ 804a743:	5f                   	pop    %edi
+ 804a744:	5d                   	pop    %ebp
+ 804a745:	c3                   	ret    
+ 804a746:	8b 84 24 78 a0 00 00 	mov    0xa078(%esp),%eax
+ 804a74d:	c7 00 45 72 72 6f    	movl   $0x6f727245,(%eax)
+ 804a753:	c7 40 04 72 3a 20 43 	movl   $0x43203a72,0x4(%eax)
+ 804a75a:	c7 40 08 6c 69 65 6e 	movl   $0x6e65696c,0x8(%eax)
+ 804a761:	c7 40 0c 74 20 75 6e 	movl   $0x6e752074,0xc(%eax)
+ 804a768:	c7 40 10 61 62 6c 65 	movl   $0x656c6261,0x10(%eax)
+ 804a76f:	c7 40 14 20 74 6f 20 	movl   $0x206f7420,0x14(%eax)
+ 804a776:	c7 40 18 72 65 61 64 	movl   $0x64616572,0x18(%eax)
+ 804a77d:	c7 40 1c 20 73 74 61 	movl   $0x61747320,0x1c(%eax)
+ 804a784:	c7 40 20 74 75 73 20 	movl   $0x20737574,0x20(%eax)
+ 804a78b:	c7 40 24 6d 65 73 73 	movl   $0x7373656d,0x24(%eax)
+ 804a792:	c7 40 28 61 67 65 20 	movl   $0x20656761,0x28(%eax)
+ 804a799:	c7 40 2c 66 72 6f 6d 	movl   $0x6d6f7266,0x2c(%eax)
+ 804a7a0:	c7 40 30 20 73 65 72 	movl   $0x72657320,0x30(%eax)
+ 804a7a7:	c7 40 34 76 65 72 00 	movl   $0x726576,0x34(%eax)
+ 804a7ae:	83 ec 0c             	sub    $0xc,%esp
+ 804a7b1:	55                   	push   %ebp
+ 804a7b2:	e8 39 ea ff ff       	call   80491f0 <close@plt>
+ 804a7b7:	83 c4 10             	add    $0x10,%esp
+ 804a7ba:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a7bf:	e9 77 ff ff ff       	jmp    804a73b <submitr+0x6ab>
+ 804a7c4:	8b 84 24 78 a0 00 00 	mov    0xa078(%esp),%eax
+ 804a7cb:	c7 00 45 72 72 6f    	movl   $0x6f727245,(%eax)
+ 804a7d1:	c7 40 04 72 3a 20 43 	movl   $0x43203a72,0x4(%eax)
+ 804a7d8:	c7 40 08 6c 69 65 6e 	movl   $0x6e65696c,0x8(%eax)
+ 804a7df:	c7 40 0c 74 20 75 6e 	movl   $0x6e752074,0xc(%eax)
+ 804a7e6:	c7 40 10 61 62 6c 65 	movl   $0x656c6261,0x10(%eax)
+ 804a7ed:	c7 40 14 20 74 6f 20 	movl   $0x206f7420,0x14(%eax)
+ 804a7f4:	c7 40 18 77 72 69 74 	movl   $0x74697277,0x18(%eax)
+ 804a7fb:	c7 40 1c 65 20 74 6f 	movl   $0x6f742065,0x1c(%eax)
+ 804a802:	c7 40 20 20 74 68 65 	movl   $0x65687420,0x20(%eax)
+ 804a809:	c7 40 24 20 73 65 72 	movl   $0x72657320,0x24(%eax)
+ 804a810:	c7 40 28 76 65 72 00 	movl   $0x726576,0x28(%eax)
+ 804a817:	83 ec 0c             	sub    $0xc,%esp
+ 804a81a:	55                   	push   %ebp
+ 804a81b:	e8 d0 e9 ff ff       	call   80491f0 <close@plt>
+ 804a820:	83 c4 10             	add    $0x10,%esp
+ 804a823:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a828:	e9 0e ff ff ff       	jmp    804a73b <submitr+0x6ab>
+ 804a82d:	8b 6c 24 04          	mov    0x4(%esp),%ebp
+ 804a831:	8b 83 58 d7 ff ff    	mov    -0x28a8(%ebx),%eax
+ 804a837:	8b 8c 24 78 a0 00 00 	mov    0xa078(%esp),%ecx
+ 804a83e:	89 01                	mov    %eax,(%ecx)
+ 804a840:	8b 83 97 d7 ff ff    	mov    -0x2869(%ebx),%eax
+ 804a846:	8b 8c 24 78 a0 00 00 	mov    0xa078(%esp),%ecx
+ 804a84d:	89 41 3f             	mov    %eax,0x3f(%ecx)
+ 804a850:	8b 84 24 78 a0 00 00 	mov    0xa078(%esp),%eax
+ 804a857:	8d 78 04             	lea    0x4(%eax),%edi
+ 804a85a:	83 e7 fc             	and    $0xfffffffc,%edi
+ 804a85d:	29 f8                	sub    %edi,%eax
+ 804a85f:	8d b3 58 d7 ff ff    	lea    -0x28a8(%ebx),%esi
+ 804a865:	29 c6                	sub    %eax,%esi
+ 804a867:	83 c0 43             	add    $0x43,%eax
+ 804a86a:	c1 e8 02             	shr    $0x2,%eax
+ 804a86d:	89 c1                	mov    %eax,%ecx
+ 804a86f:	f3 a5                	rep movsl %ds:(%esi),%es:(%edi)
+ 804a871:	83 ec 0c             	sub    $0xc,%esp
+ 804a874:	55                   	push   %ebp
+ 804a875:	e8 76 e9 ff ff       	call   80491f0 <close@plt>
+ 804a87a:	83 c4 10             	add    $0x10,%esp
+ 804a87d:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a882:	e9 b4 fe ff ff       	jmp    804a73b <submitr+0x6ab>
+
+0804a887 <init_timeout>:
+ 804a887:	56                   	push   %esi
+ 804a888:	53                   	push   %ebx
+ 804a889:	83 ec 04             	sub    $0x4,%esp
+ 804a88c:	e8 df e9 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 804a891:	81 c3 6f 37 00 00    	add    $0x376f,%ebx
+ 804a897:	8b 74 24 10          	mov    0x10(%esp),%esi
+ 804a89b:	85 f6                	test   %esi,%esi
+ 804a89d:	75 06                	jne    804a8a5 <init_timeout+0x1e>
+ 804a89f:	83 c4 04             	add    $0x4,%esp
+ 804a8a2:	5b                   	pop    %ebx
+ 804a8a3:	5e                   	pop    %esi
+ 804a8a4:	c3                   	ret    
+ 804a8a5:	83 ec 08             	sub    $0x8,%esp
+ 804a8a8:	8d 83 91 bf ff ff    	lea    -0x406f(%ebx),%eax
+ 804a8ae:	50                   	push   %eax
+ 804a8af:	6a 0e                	push   $0xe
+ 804a8b1:	e8 da e7 ff ff       	call   8049090 <signal@plt>
+ 804a8b6:	85 f6                	test   %esi,%esi
+ 804a8b8:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804a8bd:	0f 48 f0             	cmovs  %eax,%esi
+ 804a8c0:	89 34 24             	mov    %esi,(%esp)
+ 804a8c3:	e8 e8 e7 ff ff       	call   80490b0 <alarm@plt>
+ 804a8c8:	83 c4 10             	add    $0x10,%esp
+ 804a8cb:	eb d2                	jmp    804a89f <init_timeout+0x18>
+
+0804a8cd <init_driver>:
+ 804a8cd:	55                   	push   %ebp
+ 804a8ce:	57                   	push   %edi
+ 804a8cf:	56                   	push   %esi
+ 804a8d0:	53                   	push   %ebx
+ 804a8d1:	83 ec 24             	sub    $0x24,%esp
+ 804a8d4:	e8 97 e9 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 804a8d9:	81 c3 27 37 00 00    	add    $0x3727,%ebx
+ 804a8df:	8b 7c 24 38          	mov    0x38(%esp),%edi
+ 804a8e3:	6a 01                	push   $0x1
+ 804a8e5:	6a 0d                	push   $0xd
+ 804a8e7:	e8 a4 e7 ff ff       	call   8049090 <signal@plt>
+ 804a8ec:	83 c4 08             	add    $0x8,%esp
+ 804a8ef:	6a 01                	push   $0x1
+ 804a8f1:	6a 1d                	push   $0x1d
+ 804a8f3:	e8 98 e7 ff ff       	call   8049090 <signal@plt>
+ 804a8f8:	83 c4 08             	add    $0x8,%esp
+ 804a8fb:	6a 01                	push   $0x1
+ 804a8fd:	6a 1d                	push   $0x1d
+ 804a8ff:	e8 8c e7 ff ff       	call   8049090 <signal@plt>
+ 804a904:	83 c4 0c             	add    $0xc,%esp
+ 804a907:	6a 00                	push   $0x0
+ 804a909:	6a 01                	push   $0x1
+ 804a90b:	6a 02                	push   $0x2
+ 804a90d:	e8 8e e8 ff ff       	call   80491a0 <socket@plt>
+ 804a912:	83 c4 10             	add    $0x10,%esp
+ 804a915:	85 c0                	test   %eax,%eax
+ 804a917:	0f 88 96 00 00 00    	js     804a9b3 <init_driver+0xe6>
+ 804a91d:	89 c6                	mov    %eax,%esi
+ 804a91f:	83 ec 0c             	sub    $0xc,%esp
+ 804a922:	8d 83 2c d8 ff ff    	lea    -0x27d4(%ebx),%eax
+ 804a928:	50                   	push   %eax
+ 804a929:	e8 92 e8 ff ff       	call   80491c0 <gethostbyname@plt>
+ 804a92e:	83 c4 10             	add    $0x10,%esp
+ 804a931:	85 c0                	test   %eax,%eax
+ 804a933:	0f 84 c5 00 00 00    	je     804a9fe <init_driver+0x131>
+ 804a939:	89 e5                	mov    %esp,%ebp
+ 804a93b:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+ 804a942:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%esp)
+ 804a949:	00 
+ 804a94a:	c7 44 24 08 00 00 00 	movl   $0x0,0x8(%esp)
+ 804a951:	00 
+ 804a952:	c7 44 24 0c 00 00 00 	movl   $0x0,0xc(%esp)
+ 804a959:	00 
+ 804a95a:	66 c7 04 24 02 00    	movw   $0x2,(%esp)
+ 804a960:	6a 0c                	push   $0xc
+ 804a962:	ff 70 0c             	push   0xc(%eax)
+ 804a965:	8b 40 10             	mov    0x10(%eax),%eax
+ 804a968:	ff 30                	push   (%eax)
+ 804a96a:	8d 44 24 10          	lea    0x10(%esp),%eax
+ 804a96e:	50                   	push   %eax
+ 804a96f:	e8 9c e7 ff ff       	call   8049110 <__memmove_chk@plt>
+ 804a974:	66 c7 44 24 12 43 37 	movw   $0x3743,0x12(%esp)
+ 804a97b:	83 c4 0c             	add    $0xc,%esp
+ 804a97e:	6a 10                	push   $0x10
+ 804a980:	55                   	push   %ebp
+ 804a981:	56                   	push   %esi
+ 804a982:	e8 59 e8 ff ff       	call   80491e0 <connect@plt>
+ 804a987:	89 ec                	mov    %ebp,%esp
+ 804a989:	85 c0                	test   %eax,%eax
+ 804a98b:	0f 88 d9 00 00 00    	js     804aa6a <init_driver+0x19d>
+ 804a991:	83 ec 0c             	sub    $0xc,%esp
+ 804a994:	56                   	push   %esi
+ 804a995:	e8 56 e8 ff ff       	call   80491f0 <close@plt>
+ 804a99a:	66 c7 07 4f 4b       	movw   $0x4b4f,(%edi)
+ 804a99f:	c6 47 02 00          	movb   $0x0,0x2(%edi)
+ 804a9a3:	83 c4 10             	add    $0x10,%esp
+ 804a9a6:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804a9ab:	83 c4 1c             	add    $0x1c,%esp
+ 804a9ae:	5b                   	pop    %ebx
+ 804a9af:	5e                   	pop    %esi
+ 804a9b0:	5f                   	pop    %edi
+ 804a9b1:	5d                   	pop    %ebp
+ 804a9b2:	c3                   	ret    
+ 804a9b3:	c7 07 45 72 72 6f    	movl   $0x6f727245,(%edi)
+ 804a9b9:	c7 47 04 72 3a 20 43 	movl   $0x43203a72,0x4(%edi)
+ 804a9c0:	c7 47 08 6c 69 65 6e 	movl   $0x6e65696c,0x8(%edi)
+ 804a9c7:	c7 47 0c 74 20 75 6e 	movl   $0x6e752074,0xc(%edi)
+ 804a9ce:	c7 47 10 61 62 6c 65 	movl   $0x656c6261,0x10(%edi)
+ 804a9d5:	c7 47 14 20 74 6f 20 	movl   $0x206f7420,0x14(%edi)
+ 804a9dc:	c7 47 18 63 72 65 61 	movl   $0x61657263,0x18(%edi)
+ 804a9e3:	c7 47 1c 74 65 20 73 	movl   $0x73206574,0x1c(%edi)
+ 804a9ea:	c7 47 20 6f 63 6b 65 	movl   $0x656b636f,0x20(%edi)
+ 804a9f1:	66 c7 47 24 74 00    	movw   $0x74,0x24(%edi)
+ 804a9f7:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804a9fc:	eb ad                	jmp    804a9ab <init_driver+0xde>
+ 804a9fe:	c7 07 45 72 72 6f    	movl   $0x6f727245,(%edi)
+ 804aa04:	c7 47 04 72 3a 20 44 	movl   $0x44203a72,0x4(%edi)
+ 804aa0b:	c7 47 08 4e 53 20 69 	movl   $0x6920534e,0x8(%edi)
+ 804aa12:	c7 47 0c 73 20 75 6e 	movl   $0x6e752073,0xc(%edi)
+ 804aa19:	c7 47 10 61 62 6c 65 	movl   $0x656c6261,0x10(%edi)
+ 804aa20:	c7 47 14 20 74 6f 20 	movl   $0x206f7420,0x14(%edi)
+ 804aa27:	c7 47 18 72 65 73 6f 	movl   $0x6f736572,0x18(%edi)
+ 804aa2e:	c7 47 1c 6c 76 65 20 	movl   $0x2065766c,0x1c(%edi)
+ 804aa35:	c7 47 20 73 65 72 76 	movl   $0x76726573,0x20(%edi)
+ 804aa3c:	c7 47 24 65 72 20 61 	movl   $0x61207265,0x24(%edi)
+ 804aa43:	c7 47 28 64 64 72 65 	movl   $0x65726464,0x28(%edi)
+ 804aa4a:	66 c7 47 2c 73 73    	movw   $0x7373,0x2c(%edi)
+ 804aa50:	c6 47 2e 00          	movb   $0x0,0x2e(%edi)
+ 804aa54:	83 ec 0c             	sub    $0xc,%esp
+ 804aa57:	56                   	push   %esi
+ 804aa58:	e8 93 e7 ff ff       	call   80491f0 <close@plt>
+ 804aa5d:	83 c4 10             	add    $0x10,%esp
+ 804aa60:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804aa65:	e9 41 ff ff ff       	jmp    804a9ab <init_driver+0xde>
+ 804aa6a:	83 ec 0c             	sub    $0xc,%esp
+ 804aa6d:	8d 83 2c d8 ff ff    	lea    -0x27d4(%ebx),%eax
+ 804aa73:	50                   	push   %eax
+ 804aa74:	8d 83 e8 d7 ff ff    	lea    -0x2818(%ebx),%eax
+ 804aa7a:	50                   	push   %eax
+ 804aa7b:	6a ff                	push   $0xffffffff
+ 804aa7d:	6a 01                	push   $0x1
+ 804aa7f:	57                   	push   %edi
+ 804aa80:	e8 8b e7 ff ff       	call   8049210 <__sprintf_chk@plt>
+ 804aa85:	83 c4 14             	add    $0x14,%esp
+ 804aa88:	56                   	push   %esi
+ 804aa89:	e8 62 e7 ff ff       	call   80491f0 <close@plt>
+ 804aa8e:	89 ec                	mov    %ebp,%esp
+ 804aa90:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804aa95:	e9 11 ff ff ff       	jmp    804a9ab <init_driver+0xde>
+
+0804aa9a <driver_post>:
+ 804aa9a:	56                   	push   %esi
+ 804aa9b:	53                   	push   %ebx
+ 804aa9c:	83 ec 04             	sub    $0x4,%esp
+ 804aa9f:	e8 cc e7 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 804aaa4:	81 c3 5c 35 00 00    	add    $0x355c,%ebx
+ 804aaaa:	8b 54 24 10          	mov    0x10(%esp),%edx
+ 804aaae:	8b 44 24 18          	mov    0x18(%esp),%eax
+ 804aab2:	8b 74 24 1c          	mov    0x1c(%esp),%esi
+ 804aab6:	85 c0                	test   %eax,%eax
+ 804aab8:	75 18                	jne    804aad2 <driver_post+0x38>
+ 804aaba:	85 d2                	test   %edx,%edx
+ 804aabc:	74 05                	je     804aac3 <driver_post+0x29>
+ 804aabe:	80 3a 00             	cmpb   $0x0,(%edx)
+ 804aac1:	75 37                	jne    804aafa <driver_post+0x60>
+ 804aac3:	66 c7 06 4f 4b       	movw   $0x4b4f,(%esi)
+ 804aac8:	c6 46 02 00          	movb   $0x0,0x2(%esi)
+ 804aacc:	83 c4 04             	add    $0x4,%esp
+ 804aacf:	5b                   	pop    %ebx
+ 804aad0:	5e                   	pop    %esi
+ 804aad1:	c3                   	ret    
+ 804aad2:	83 ec 04             	sub    $0x4,%esp
+ 804aad5:	ff 74 24 18          	push   0x18(%esp)
+ 804aad9:	8d 83 3e d8 ff ff    	lea    -0x27c2(%ebx),%eax
+ 804aadf:	50                   	push   %eax
+ 804aae0:	6a 01                	push   $0x1
+ 804aae2:	e8 a9 e6 ff ff       	call   8049190 <__printf_chk@plt>
+ 804aae7:	66 c7 06 4f 4b       	movw   $0x4b4f,(%esi)
+ 804aaec:	c6 46 02 00          	movb   $0x0,0x2(%esi)
+ 804aaf0:	83 c4 10             	add    $0x10,%esp
+ 804aaf3:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804aaf8:	eb d2                	jmp    804aacc <driver_post+0x32>
+ 804aafa:	83 ec 04             	sub    $0x4,%esp
+ 804aafd:	56                   	push   %esi
+ 804aafe:	ff 74 24 1c          	push   0x1c(%esp)
+ 804ab02:	8d 83 55 d8 ff ff    	lea    -0x27ab(%ebx),%eax
+ 804ab08:	50                   	push   %eax
+ 804ab09:	52                   	push   %edx
+ 804ab0a:	8d 83 63 d8 ff ff    	lea    -0x279d(%ebx),%eax
+ 804ab10:	50                   	push   %eax
+ 804ab11:	68 37 43 00 00       	push   $0x4337
+ 804ab16:	8d 83 2c d8 ff ff    	lea    -0x27d4(%ebx),%eax
+ 804ab1c:	50                   	push   %eax
+ 804ab1d:	e8 6e f5 ff ff       	call   804a090 <submitr>
+ 804ab22:	83 c4 20             	add    $0x20,%esp
+ 804ab25:	eb a5                	jmp    804aacc <driver_post+0x32>
+
+Disassembly of section .fini:
+
+0804ab28 <_fini>:
+ 804ab28:	f3 0f 1e fb          	endbr32 
+ 804ab2c:	53                   	push   %ebx
+ 804ab2d:	83 ec 08             	sub    $0x8,%esp
+ 804ab30:	e8 3b e7 ff ff       	call   8049270 <__x86.get_pc_thunk.bx>
+ 804ab35:	81 c3 cb 34 00 00    	add    $0x34cb,%ebx
+ 804ab3b:	83 c4 08             	add    $0x8,%esp
+ 804ab3e:	5b                   	pop    %ebx
+ 804ab3f:	c3                   	ret    

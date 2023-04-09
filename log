@@ -1,0 +1,29 @@
+Log file for project 1.
+
+Date  Time Spent  Activity
+----  ----------  --------
+02/04 1 hour      Read through spec, watched walkthrough
+
+02/05 2.5 hour    Went to office hours, finished 1.1 in walkthrough, began
+                  coding heap statistics, passed most stats tests.
+
+02/06 1 hour      Continued working on test cases for tasks 1 and 2
+
+02/07 3 hours     Passed all test cases in tasks 1-5 of 1.1, began understanding
+                  1.2
+
+02/08 1 hour      Fixed inconsequential bug for 1.1, began understanding 1.2
+
+02/10 2.5 hours   Did heavy hitters
+
+02/11 2 hours     Got started on Bomb Lab
+
+02/12 3 hours     Passed all cases for dmalloc, continued working on bomb lab,
+                  passed phase 3
+
+02/13 5 hours     Defused up to phase 6
+
+02/14 4.5 hours   Defused all phases, fixed dmalloc memory error
+
+----------------
+TOTAL: 25.5 hours.
